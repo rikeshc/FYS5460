@@ -1,4 +1,4 @@
-Circuit: * Z:\uio\hume\student-u18\rikeshc\LTSpice\examples\Educational\LM741.asc
+Circuit: * Z:\uio\hume\student-u18\rikeshc\Rikesh\mast\INF5460\oblig_1\LM741.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -45,8 +45,8 @@ Gmin stepping succeeded in finding the operating point.
 .step cload=4e-011
 .step cload=5e-011
 
-Date: Tue Sep 06 17:22:09 2016
-Total elapsed time: 1.034 seconds.
+Date: Wed Sep 07 14:07:51 2016
+Total elapsed time: 1.025 seconds.
 
 tnom = 27
 temp = 27
@@ -60,6 +60,6 @@ matrix size = 48
 fillins = 43
 solver = Normal
 Matrix Compiler1:     404 opcodes
-Matrix Compiler2:     448 opcodes  5.7/[4.2]/5.2
+Matrix Compiler2:     448 opcodes  5.2/[4.2]/5.9
 
 

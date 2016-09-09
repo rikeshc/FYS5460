@@ -1,0 +1,156 @@
+\documentclass{article}
+\title{INF5442 Image Sensors Circuits and Systems\\
+Exercise \#4 lectured on September 16, 2015}
+\author{Rikesh Chauhan\\ 
+\texttt{rikesh.chauhan@fys.uio.no}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{What is meant by ‘black level’ in a digital picture?}
+Black level in a digital picture is a non zero output from the ADC of the image 
+sensor even when the pixel output signal is zero. This may be due to offset 
+voltage to the pixel signal, offset from dark current and clipping at 0DN in 
+the ADC.
+
+\section{List possible reasons why a digital camera has a non-zero 
+black level?}
+A digital camera has a non zero black level due to the following reasons:
+\begin{itemize}
+\item Any clipping to 0DN in ADC which leads to non linear signal
+\item Offset voltage added to pixel signal
+\item Offset from dark current generation
+\end{itemize}
+
+\section{Explain why black level must be subtracted before being 
+processed in the signal processing data path inside a camera. 
+Give an example what can happen.}
+Black level is an offset to a pixel value. That is why a pixel value never 
+represents a right value unless black level is subtracted in the signal processing 
+data path inside a camera.\newline
+
+\noindent Let us consider an example to illustrate why black level subtraction is 
+necessary. For example let 100mV be a black level noise out of the ADC of an image 
+sensor. Now when this image sensor is exposed to take an image, let us assume the 
+value of an arbirtary pixel be 750 mV. This pixel value includes the black level 
+noise too. This mean the actual pixel value is 650mV. In other words, the value of 
+R or B or G represented by 650mV and 750mV are different (with least 5 bit ADC) and 
+hence the colors are different too. \\
+
+\textbf{Answer from Georgi: } Could also say alternatively: The black level must be subtracted in order to maintain a linear relationship between 
+the different color components in the image. Otherwise, the ratio between the different 
+color components in the image will change depending on the illumination level (relative 
+to the black level), which would result in errors in the color representation from 
+the sensor. This is obvious if assuming that the captured R/G/B values have some 
+non-zero offset across the sensor, BLK, where the captured R/G/B values would become:
+(BLK+R, BLK+G, BLK+B). Since the color is represented as the relative relationship 
+between the different color components, it is clear that a non-zero value of BLK would 
+result in a change to this relationship, compromising the color and brightness outcome 
+of the captured scene. Also this piedistal would make it artifically easier for the 
+pixel value to saturate more easily than it needs to and produce a brighter picture 
+than it needs to.
+
+
+\section{What is the role of the demosaicing (aka color interpolation) 
+algorithm?}
+Every pixel in an image sensor only measures either Red, Green or Blue photons. 
+However, we need values of all R, G and B for every pixel in order to produce an 
+image. So during image processing, remaining two color values for a pixel are 
+approximated using color interpolation techniques. This is called demosaicing in 
+color processing. In other word, the role of the demosaicing algorithm is to convert 
+monchromatic value of a pixel to polychromatic value. 
+
+\section{What artifact(s) can demosaicing introduce in the image? What, 
+if anything, can be done to mitigate such issue(s)?}
+Artifacts introduced in a image due to  demosaicing are:
+\begin{itemize}
+\item If interpolation of color at a pixel is done with just adjacent pixels like in 
+'Nearest Neighbour Interpolation' and 'Linear Interpolation' method, then the 
+resulting image is of poor quality. \newline 
+\noindent Here using more pixels for approximation imporves the image quality.
+\item Cyclic pattern noise appear when using bilinear interpolation method because of 
+cyclic change in direction of interpolation. \newline
+\noindent This problem can be mitigated using more pixel points for approximation as 
+mentioned before.
+\end{itemize} 
+
+\textbf{Answer from Georgi} Kind of an off answer, but what you could say is: Demosaicing can introduce color artifacts, such as moire patterns, and also aliasing 
+effects (moire effect) where the resolution (the spatial frequency) of the scene is much 
+higher than the resolution that the camera sensor can resolve. That's why demosaicing 
+is very challenging in those high detail areas of the scene (picture) and fuzzy, warping 
+and miscoloration effects are typically observed in those conditions. To combat them:
+One way to resolve this issue is to use camera with greater resolution (that will be 
+able to see the difference). Another , different approach, is imposing an “optical” 
+low pass filter, before the sensor array, that will pre-blur the image, removing the 
+aliasing (equlizing the resolution of the scene of that what the pixel array could 
+reslolve). Other thecniques include more advanced / processing intensive demosaicing 
+algorithms can be used to mitigate the issue. For instance, using higher order filters 
+like a bi-cubic spline filter. It is also possible to perform non-linear operations in 
+order to implement optimal color interpolation, including making the algorithm adaptive
+across the image. For instance, the algorithm can detect local edges (corresponding to 
+high frequency contents) and implement filtering that adapts locally such that the 
+preserve edges.
+
+\section{Explain the principle role of the color correction matrix in a digital 
+camera.}
+Color Filter Array(CFA) in practice cannot filter light to  monochromatic which 
+means there is always some cross color mixing between the adjacent pixels in the image 
+sensor. In this case a diagonal matrix is used as a color correction matrix to 
+correct the CFA distrotion of monochromatic light.\newline
+
+\noindent Similarly a non diagonal matrix is used as color correction matrix when an image 
+is caputured in a non natural illumination like florescent.\newline
+
+\noindent In general, this technique is also known as white balancing because after color 
+correction white is not tinted by any other color.
+
+\section{If a CCM equals a unity matrix with only 1s in the diagonal and 0s 
+all other coefficients, what does it say about the sensor?}
+It means that the image sensor has recorded true RGB values without mixing them. Hence we do 
+not need to correct this value. In other words, there exits no crosstalk between R-G-B 
+pixel values in the image sensor.
+
+\section{What is the disadvantage of having relatively large CCM coefficients 
+outside the diagonal?}
+Large CCM coefficients outside diagoanl means more is the differnce between the actual scence 
+and the image sensor output.
+
+\section{Can the CCM matrix be adjusted to compensate for changes in the 
+scene illumination spectrum? If yes, explain how.}
+Yes, the CCM matrix can be adjusted to compensate for changes in the scene illumination 
+spectrum. For example: in an image taken under flourescent light illumination, the Red channel 
+is dominant. Here a CCM can be used with higher weights for matrix elements corresponding to 
+G and B channels.
+
+\section{Explain the basic principles used to automatically white balance (AWB) 
+the sensor output image in digital cameras.}
+Automatic white balance(AWB) technique which corrects for illumination source by adjusting red, green and blue color channel gain during pixel readout process. \\
+
+\textbf{Answer from Georgi: } A digital camera first captures the raw R/G/B values, and performs de-mosaicing on these values. At
+some early stage in the following signal processing chain, it is common to perform white balancing in
+order to adjust the color contents of the captured image, to compensate for the different color temperature of the illumination source at the scene.\newline
+
+The automatic white balance refers to the process where the camera automatically estimates the
+necessary white balance operation, without being told the color temperature of the light by the user.
+The automatic white balance analyzes the captured data and tries to estimate the necessary
+compensation. There are 3 popular techniques figuring out the kind of lightsource we have in a scene. 
+So to gain u/down the RGB values of picture to compensate for color bias produed by the scenes’s 
+lighting:
+\begin{itemize}
+\item Grey world – assuming the average color of the entire scene is grey, meaning that the all the
+averaged sums for each of the three colors in the entire scene, must have exactly the same weight.
+So if the Green component (it’s total sum in the scene), has bigger value than the other two colors,
+then it needs to be gained down.
+\item Brightest whitespot – searching for a white space (reference) in a picture by taking the brighest
+point pixels, so if the pixels in that bright area don’t have exactly the same value, adjust the color
+channels that differ to achive equality. And then use the exact same multiplication factor for each of
+the colors that needs adjusting, and gain on the entire scene. Points/areas which are saturated must
+not be used as reference.
+\item Color gamut of the scene - analyze the color distribution of the scene (i.e. make a hystogram,
+calculate blue to green and red to gree ratios). Then we have a built a data base with cases, we
+compare the color gamut of our situation with the cases, look for similarity and take the gain values
+associated with the case having the biggest resemblence with our the current color status.
+\end{itemize}
+
+\end{document}

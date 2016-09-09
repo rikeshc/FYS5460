@@ -1,0 +1,5 @@
+[0] Config.pm:361> INFO - This is Biber 1.5
+[0] Config.pm:364> INFO - Logfile is 'oblig_1.blg'
+[107] biber:193> INFO - === Thu Sep  8, 2016, 22:24:41
+[108] Biber.pm:327> INFO - Reading 'oblig_1.bcf'
+[217] Utils.pm:167> WARN - No data sources defined!
