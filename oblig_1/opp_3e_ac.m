@@ -1,8 +1,8 @@
-[time, freq, val, phase, step, head] = import_signal_lts('3_ac_again.txt');
-[time1, freq1, val1, phase1, step1, head1] = import_signal_lts('3f_ac.txt');
+[time, freq, val, phase, step, head] = import_signal_lts('3_ac_agian.txt');
+[time1, freq1, val1, phase1, step1, head1] = import_signal_lts('3f_ac_agian.txt');
 
-%head 
-figure(1)
+%%head 
+figure(2)
 yyaxis left
 semilogx(freq, val, freq1, val1); 
 %semilogx( freq1, val1+1);

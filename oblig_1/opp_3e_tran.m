@@ -1,9 +1,9 @@
-[time, freq, val, phase, step, head] = import_signal_lts('3_tran.txt');
-[time1, freq1, val1, phase1, step1, head1] = import_signal_lts('3f_tran.txt');
-
+clear all;
+[time, freq, val, phase, step, head] = import_signal_lts('3_tran_agian.txt');
+[time1, freq1, val1, phase1, step1, head1] = import_signal_lts('3f_tran_agian.txt');
 
 %head 
-figure(2)
+figure(1)
 subplot(2, 1, 2);
 plot(time, val{1}, time1, val1{1});
 xlabel('Time, s');
