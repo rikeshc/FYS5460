@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.21)  12 SEP 2016 01:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.21)  16 SEP 2016 11:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1067,13 +1067,13 @@ Overfull \hbox (5.33002pt too wide) in paragraph at lines 120--120
  []
 
 [6 <./img/sch_1d.pdf> <./img/1d.pdf>]
-<img/2a_tran.pdf, id=316, 384.90811pt x 314.19482pt>
+<img/2a_tran.pdf, id=317, 384.90811pt x 314.19482pt>
 File: img/2a_tran.pdf Graphic file (type pdf)
  <use img/2a_tran.pdf>
 Package pdftex.def Info: img/2a_tran.pdf used on input line 130.
-(pdftex.def)             Requested size: 350.99762pt x 286.5122pt.
+(pdftex.def)             Requested size: 312.00119pt x 254.67859pt.
 
-<img/2a.pdf, id=317, 393.75209pt x 317.37611pt>
+<img/2a.pdf, id=318, 393.75209pt x 317.37611pt>
 File: img/2a.pdf Graphic file (type pdf)
  <use img/2a.pdf>
 Package pdftex.def Info: img/2a.pdf used on input line 137.
@@ -1117,149 +1117,149 @@ Overfull \hbox (0.11339pt too wide) in paragraph at lines 147--148
 itude
  []
 
-<img/2b_tran.pdf, id=352, 381.41606pt x 315.78033pt>
+<img/2b_tran.pdf, id=353, 381.41606pt x 315.78033pt>
 File: img/2b_tran.pdf Graphic file (type pdf)
  <use img/2b_tran.pdf>
 Package pdftex.def Info: img/2b_tran.pdf used on input line 153.
 (pdftex.def)             Requested size: 312.00119pt x 258.31516pt.
 
-[8 <./img/2a.pdf>] <img/2b_fft.pdf, id=379, 374.20102pt x 305.5683pt>
+[8 <./img/2a.pdf>] <img/2b_fft.pdf, id=380, 374.20102pt x 305.5683pt>
 File: img/2b_fft.pdf Graphic file (type pdf)
 
 <use img/2b_fft.pdf>
 Package pdftex.def Info: img/2b_fft.pdf used on input line 160.
 (pdftex.def)             Requested size: 312.00119pt x 254.7826pt.
  [9 <./img/2b_tran.pdf> <./img/2b_fft.pdf>]
-<img/2c_tran.pdf, id=435, 365.75035pt x 312.82631pt>
+<img/2c_tran.pdf, id=436, 365.75035pt x 312.82631pt>
 File: img/2c_tran.pdf Graphic file (type pdf)
  <use img/2c_tran.pdf>
 Package pdftex.def Info: img/2c_tran.pdf used on input line 173.
 (pdftex.def)             Requested size: 350.99762pt x 300.23346pt.
 
-<img/2c_fft.pdf, id=436, 378.79968pt x 300.90619pt>
+<img/2c_fft.pdf, id=437, 378.79968pt x 300.90619pt>
 File: img/2c_fft.pdf Graphic file (type pdf)
  <use img/2c_fft.pdf>
 Package pdftex.def Info: img/2c_fft.pdf used on input line 180.
 (pdftex.def)             Requested size: 350.99762pt x 278.82973pt.
 
 [10 <./img/2c_tran.pdf>] [11 <./img/2c_fft.pdf>]
-<img/sch_3.pdf, id=498, 451.5356pt x 288.07375pt>
+<img/sch_3.pdf, id=499, 449.51707pt x 284.52058pt>
 File: img/sch_3.pdf Graphic file (type pdf)
  <use img/sch_3.pdf>
 Package pdftex.def Info: img/sch_3.pdf used on input line 225.
-(pdftex.def)             Requested size: 312.00119pt x 199.05241pt.
+(pdftex.def)             Requested size: 312.00119pt x 197.48724pt.
  [12]
-<img/3e_tran.pdf, id=506, 388.45125pt x 295.9821pt>
+<img/3e_tran.pdf, id=507, 388.45125pt x 295.9821pt>
 File: img/3e_tran.pdf Graphic file (type pdf)
  <use img/3e_tran.pdf>
 Package pdftex.def Info: img/3e_tran.pdf used on input line 233.
 (pdftex.def)             Requested size: 370.49881pt x 282.31047pt.
 
-<img/3e_ac.pdf, id=507, 576.36797pt x 308.74005pt>
+<img/3e_ac.pdf, id=508, 576.36797pt x 308.74005pt>
 File: img/3e_ac.pdf Graphic file (type pdf)
  <use img/3e_ac.pdf>
 Package pdftex.def Info: img/3e_ac.pdf used on input line 240.
 (pdftex.def)             Requested size: 390.0pt x 208.91345pt.
  [13 <./img/sch_3.pdf> <./img/3e_tran.pdf>]
-<img/3f_tran.pdf, id=555, 388.88696pt x 291.85808pt>
+<img/3f_tran.pdf, id=557, 388.88696pt x 291.85808pt>
 File: img/3f_tran.pdf Graphic file (type pdf)
  <use img/3f_tran.pdf>
-Package pdftex.def Info: img/3f_tran.pdf used on input line 250.
+Package pdftex.def Info: img/3f_tran.pdf used on input line 252.
 (pdftex.def)             Requested size: 331.50238pt x 248.79752pt.
 
-[14 <./img/3e_ac.pdf>] <img/3f_ac.pdf, id=582, 411.29538pt x 302.12733pt>
+[14 <./img/3e_ac.pdf>] <img/3f_ac.pdf, id=584, 411.29538pt x 302.12733pt>
 File: img/3f_ac.pdf Graphic file (type pdf)
 
 <use img/3f_ac.pdf>
-Package pdftex.def Info: img/3f_ac.pdf used on input line 257.
+Package pdftex.def Info: img/3f_ac.pdf used on input line 259.
 (pdftex.def)             Requested size: 331.50238pt x 243.51855pt.
  [15 <./img/3f_tran.pdf> <./img/3f_ac.pdf>]
-<img/two_con.png, id=636, 533.995pt x 250.9375pt>
+<img/two_con.png, id=638, 533.995pt x 250.9375pt>
 File: img/two_con.png Graphic file (type png)
  <use img/two_con.png>
-Package pdftex.def Info: img/two_con.png used on input line 271.
+Package pdftex.def Info: img/two_con.png used on input line 273.
 (pdftex.def)             Requested size: 350.99762pt x 164.94917pt.
 
-<img/sch_4a.pdf, id=638, 455.46805pt x 202.02525pt>
+<img/sch_4a.pdf, id=640, 455.46805pt x 202.02525pt>
 File: img/sch_4a.pdf Graphic file (type pdf)
  <use img/sch_4a.pdf>
-Package pdftex.def Info: img/sch_4a.pdf used on input line 278.
+Package pdftex.def Info: img/sch_4a.pdf used on input line 280.
 (pdftex.def)             Requested size: 350.99762pt x 155.69556pt.
 
 [16 <./img/two_con.png> <./img/sch_4a.pdf>]
-<img/two_con_sh.png, id=661, 370.38374pt x 330.23375pt>
+<img/two_con_sh.png, id=663, 370.38374pt x 330.23375pt>
 File: img/two_con_sh.png Graphic file (type png)
 
 <use img/two_con_sh.png>
-Package pdftex.def Info: img/two_con_sh.png used on input line 307.
+Package pdftex.def Info: img/two_con_sh.png used on input line 310.
 (pdftex.def)             Requested size: 350.99762pt x 312.95435pt.
- <img/sch_4b.pdf, id=662, 443.74048pt x 188.15666pt>
+ <img/sch_4b.pdf, id=664, 443.74048pt x 188.15666pt>
 File: img/sch_4b.pdf Graphic file (type pdf)
 
 <use img/sch_4b.pdf>
-Package pdftex.def Info: img/sch_4b.pdf used on input line 314.
+Package pdftex.def Info: img/sch_4b.pdf used on input line 317.
 (pdftex.def)             Requested size: 390.0pt x 165.37451pt.
  [17 <./img/two_con_sh.png>]
-<img/4.pdf, id=672, 393.54073pt x 316.36716pt>
+<img/4.pdf, id=674, 393.54073pt x 316.36716pt>
 File: img/4.pdf Graphic file (type pdf)
  <use img/4.pdf>
-Package pdftex.def Info: img/4.pdf used on input line 340.
+Package pdftex.def Info: img/4.pdf used on input line 343.
 (pdftex.def)             Requested size: 390.0pt x 313.52306pt.
- [18 <./img/sch_4b.pdf>] <img/sch_5a.pdf, id=696, 457.15048pt x 159.48152pt>
+ [18 <./img/sch_4b.pdf>] <img/sch_5a.pdf, id=698, 457.15048pt x 159.48152pt>
 File: img/sch_5a.pdf Graphic file (type pdf)
 
 <use img/sch_5a.pdf>
-Package pdftex.def Info: img/sch_5a.pdf used on input line 354.
+Package pdftex.def Info: img/sch_5a.pdf used on input line 357.
 (pdftex.def)             Requested size: 350.99762pt x 122.45316pt.
  [19 <./img/4.pdf>]
-<img/5a.pdf, id=724, 376.4779pt x 276.4438pt>
+<img/5a.pdf, id=726, 376.4779pt x 276.4438pt>
 File: img/5a.pdf Graphic file (type pdf)
  <use img/5a.pdf>
-Package pdftex.def Info: img/5a.pdf used on input line 361.
+Package pdftex.def Info: img/5a.pdf used on input line 364.
 (pdftex.def)             Requested size: 350.99762pt x 257.73544pt.
 
-Overfull \hbox (5.27855pt too wide) in paragraph at lines 367--368
+Overfull \hbox (5.27855pt too wide) in paragraph at lines 370--371
 \T1/pnc/m/n/12 zero nor con-stant, hence looks like these may be con-sidered wh
 ite noises.
  []
 
-<img/5b.pdf, id=726, 372.36194pt x 282.89589pt>
+<img/5b.pdf, id=728, 372.36194pt x 282.89589pt>
 File: img/5b.pdf Graphic file (type pdf)
  <use img/5b.pdf>
-Package pdftex.def Info: img/5b.pdf used on input line 371.
+Package pdftex.def Info: img/5b.pdf used on input line 374.
 (pdftex.def)             Requested size: 350.99762pt x 266.67325pt.
- [20 <./img/sch_5a.pdf> <./img/5a.pdf>] <img/sch_5c.pdf, id=765, 457.93546pt x 
+ [20 <./img/sch_5a.pdf> <./img/5a.pdf>] <img/sch_5c.pdf, id=767, 457.93546pt x 
 157.07433pt>
 File: img/sch_5c.pdf Graphic file (type pdf)
 
 <use img/sch_5c.pdf>
-Package pdftex.def Info: img/sch_5c.pdf used on input line 381.
+Package pdftex.def Info: img/sch_5c.pdf used on input line 384.
 (pdftex.def)             Requested size: 350.99762pt x 120.40112pt.
- <img/5c.pdf, id=766, 366.76703pt x 277.80016pt>
+ <img/5c.pdf, id=768, 366.76703pt x 277.80016pt>
 File: img/5c.pdf Graphic file (type pdf)
 
 <use img/5c.pdf>
-Package pdftex.def Info: img/5c.pdf used on input line 388.
+Package pdftex.def Info: img/5c.pdf used on input line 391.
 (pdftex.def)             Requested size: 350.99762pt x 265.86699pt.
  [21 <./img/5b.pdf> <./img/sch_5c.pdf>]
-<img/sch_5d.pdf, id=807, 459.9976pt x 129.75485pt>
+<img/sch_5d.pdf, id=809, 459.9976pt x 129.75485pt>
 File: img/sch_5d.pdf Graphic file (type pdf)
  <use img/sch_5d.pdf>
-Package pdftex.def Info: img/sch_5d.pdf used on input line 397.
+Package pdftex.def Info: img/sch_5d.pdf used on input line 400.
 (pdftex.def)             Requested size: 350.99762pt x 99.01266pt.
 
-<img/5d.pdf, id=808, 368.09259pt x 277.69577pt>
+<img/5d.pdf, id=810, 368.09259pt x 277.69577pt>
 File: img/5d.pdf Graphic file (type pdf)
  <use img/5d.pdf>
-Package pdftex.def Info: img/5d.pdf used on input line 405.
+Package pdftex.def Info: img/5d.pdf used on input line 408.
 (pdftex.def)             Requested size: 350.99762pt x 264.81795pt.
  [22 <./img/5c.pdf> <./img/sch_5d.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 410.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 413.
  [23 <./img/5d.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 410.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 413.
  (./oblig_1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 410.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 410.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 413.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 413.
 Package rerunfilecheck Info: File `oblig_1.out' has not changed.
 (rerunfilecheck)             Checksum: 125D720509E784E67F98B3FE316CCEEC;1481.
 Package logreq Info: Writing requests to 'oblig_1.run.xml'.
@@ -1273,7 +1273,7 @@ Here is how much of TeX's memory you used:
  16229 multiletter control sequences out of 15000+600000
  26429 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,35p,858b,1446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,11n,35p,935b,1446s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
@@ -1283,10 +1283,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 15/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/urw/ncntrsbk/uncr8a.pfb>
-Output written on oblig_1.pdf (23 pages, 2104479 bytes).
+Output written on oblig_1.pdf (23 pages, 2105189 bytes).
 PDF statistics:
- 918 PDF objects out of 1000 (max. 8388607)
- 731 compressed objects within 8 object streams
+ 920 PDF objects out of 1000 (max. 8388607)
+ 733 compressed objects within 8 object streams
  79 named destinations out of 1000 (max. 500000)
  340 words of extra memory for PDF output out of 10000 (max. 10000000)
 

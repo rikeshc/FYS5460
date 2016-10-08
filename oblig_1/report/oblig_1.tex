@@ -27,7 +27,7 @@ Mandatory task 1}
 \subsection{Transient Analysis}
 Figure \ref{sch_lm} is the given schematic of BJT amplifier LM741 for analysis.
 
-Resistors $R11$ and $R12$ makes a negative feedback network. Inut is applied in the positive terminal, so it is a non-inverting amplifier. 
+Resistors $R11$ and $R12$ makes a negative feedback network. Input is applied in the positive terminal, so it is a non-inverting amplifier. 
 
 Since the gain of a non-inverting amplifier is given as 
 
@@ -36,7 +36,7 @@ A_v = 1 + \frac{R11}{R22}
 \end{equation*}
  where $R11$ and $R12$ have values 10K and 1K, the gain is 11 in theory.
 
-DC input is the biasing DC voltage of the amplifier. This value determines the gain of the amplifier. DC input should be applied within the linear ranger of the amplifier. It the DC input is too high or too low, the output voltage is clipped/saturated to either +ve or -ve power supply and thus output voltage range is reduced. If the amplifier is biased with proper DC input and  when AC input is applied, output is obtained which is AC signal times the gain of amplifier. \\ 
+DC input is the biasing DC voltage of the amplifier. This value determines the gain of the amplifier. DC input should be applied within the linear range of the amplifier. If the DC input is too high or too low, the output voltage is clipped/saturated to either +ve or -ve power supply and thus output voltage range is reduced. Moreover the devices may enter into non-linear region when applied DC offset is beyond range. If the amplifier is biased with proper DC input and  when AC input is applied, output is obtained which is AC signal times the gain of amplifier. \\ 
 
 \begin{figure} [H]
   \centering 
@@ -59,7 +59,7 @@ DC input is the biasing DC voltage of the amplifier. This value determines the g
   \label{pos_offset} 
 \end{figure}
 
-From figure \ref{pos_offset} and \ref{neg_offset}, it is seen that DC-offset interval is -300 mV to 200 mV. When the offset is beyond this interval the ouput saturates to either +ve or -ve supply rail. \\
+From figure \ref{pos_offset} and \ref{neg_offset}, it is seen that DC-offset interval is -300 mV to 200 mV. When the offset is beyond this interval the ouput saturates to maximum possible output range which is just below +ve and just above -ve supply. This drop in output voltage range is due to the drop in the output stage of amplifier. \\
 
 %% Task 1b
 \subsection{AC Analysis}
@@ -121,13 +121,13 @@ Similarly  \ref{ac_neg} shows the -ve DC CM where the gain  decreases. It shows 
 %% Task 2a
 \subsection{FFT with different sampling rates}
 
-A low pass (LP) RC filter is deigned as shown in figure. R and C values are arbitarily choosen $1 \Omega$ and $1pF$ respectively so that it has a very high cutoff frequency. 
+A low pass (LP) RC filter is deigned. R and C values are arbitrarily chosen $1 \Omega$ and $1pF$ respectively so that it has a very high cutoff frequency. 
 
-A sine wave signal of period 1 ms and amplitude 1 V, as shown in figure \ref{tran_sin}, is applied at the input of the filter. This transient signal was sampled at 1/10 and 1/100 of the period and their corresponding FFT was done as shown in \ref{fft_sin}. FFT clearly shows how different sampling rates affects the frequency components of the same signal. I assume that all the harmonics of 1KHz are expected, so about -110 dB is the strongest strength of unwanted frequency component. Sampling the lower rate shows low frequency component more and vice versa. It can be concluded that the sampling rate of the measuring device actually affects the frequency components of signal. Instrument with low sampling frequency can give us misleading informations.
+A sine wave signal of period 1 ms and amplitude 1 V, as shown in figure \ref{tran_sin}, is applied at the input of the filter. This transient signal was sampled at 1/10 and 1/100 of the period and their corresponding FFT was done as shown in \ref{fft_sin}. FFT clearly shows how different sampling rates affects the frequency components of the same signal. Since a pure sine wave has only one frequency component, it is expected to see only it natural frequency in FFT. But figure  \ref{fft_sin} shows the harmonics too. It is because the sampled data of true sine wave is in-fact not representing it truly because of lower sampling rate. The strength of  strongest unwanted frequency component is -40 dB.  It can be concluded that the sampling rate of the measuring device actually affects the frequency components of signal. Instrument with low sampling frequency can give us misleading informations.
 
 \begin{figure} [H]
   \centering 
-  \includegraphics[width=0.9\textwidth]{img/2a_tran.pdf} 
+  \includegraphics[width=0.8\textwidth]{img/2a_tran.pdf} 
   \caption{Sine wave}
   \label{tran_sin} 
 \end{figure}
@@ -166,7 +166,7 @@ The clock edge should look like ramp like that of triangle pulse in order to red
 %% Task 2c
 \subsection{RC filter}
 RC filter shown in figure above is made to have cutoff at 5 times its natural frequency, ie 5 kHz. R and C values were obtained to be 1K and 25nF respectively. Square wave with frequency 1 KHz with rise and fall time of 1/100 of its period  was applied as input and its output was observed as shown in figure \ref{tran_tuned}.
-FFT of the both the input and output was done as in figure \ref{fft_tuned}. The output singal has longer rise and fall time because of larger capacitor at the output. which means output has more low frequency components than the input which is clearly shown by the FFT plot.
+FFT of the both the input and output was done as in figure \ref{fft_tuned}. The output signal has longer rise and fall time because of larger capacitor at the output. which means output has more low frequency components than the input which is clearly shown by the FFT plot.
 
 \begin{figure} [H]
   \centering 
@@ -245,6 +245,8 @@ Similarly from the ac simulation, the lower and upper corner frequency can be no
 %% Task 3f
 \subsection{}
 Figure  \ref{cap_tran2} and  \ref{cap_ac2}  are transient and frequency simulation results with comparison between different Tr and Tf. The difference is seen only in the time domain because in spite of different rise and fall time, both the signal have same frequency and hence magnitude and phase are unaffected. 
+
+In case of transient signal in figure \ref{cap_tran2}, it can be noticed that the voltage spikes due to the input current spikes of shorter Tr and Tf exceed our stability requirement. The spikes are close to 0.095 V whereas the requirement is to reduce it below 0.075 V.
 \begin{figure} [H]
   \centering 
   \includegraphics[width=0.85\textwidth]{img/3f_tran.pdf} 
@@ -296,9 +298,10 @@ C_{2S} =  1 pF * L
 
 Whereas, $C_{2G}$ being a physical component remains the same.
 
-The worst case noise magnitude is given as below which is used for calculation.
+The worst case noise magnitude is given as below which is used for calculation. This is valid when shield does not cover all the length of the conductor. When there is no shield, we take
+$C_{2S} = 0$.
 \begin{equation*}
-V_N = \frac{C_{12}}{C_{12}+C_{2G}C_{2S}}   
+V_N = \frac{C_{12}}{C_{12}+C_{2G}+C_{2S}}   
 \end{equation*}
 
 
