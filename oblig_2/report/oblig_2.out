@@ -1,0 +1,47 @@
+\BOOKMARK [1][-]{section.1}{Try to draw the equivalent form for the rest of the 11 different terminations \(B-K\). Use names here: For TP and STP cable, first and second conductor called 1.wire and 2.wire and capacitance between these called C12. Use CS1 and CS2 for capacitances between shield and 1./2. wire.}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Termination A}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Termination B}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Termination C}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Termination D}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Termination E}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.6}{Termination F}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.7}{Termination G}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.8}{Termination H}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.9}{Termination I}{section.1}% 10
+\BOOKMARK [2][-]{subsection.1.10}{Termination J}{section.1}% 11
+\BOOKMARK [2][-]{subsection.1.11}{Termination K}{section.1}% 12
+\BOOKMARK [1][-]{section.2}{In this experiment, we use a lot the decibel scale. VdB = 20log \(to.Vpp2\)to.. \040What describes the greatest change: Going from -21 to -23 dB, or to go from -72 to -78dB? \(Calculate and explain\).}{}% 13
+\BOOKMARK [1][-]{section.3}{Use termination card A together with all cables. Write down the results}{}% 14
+\BOOKMARK [2][-]{subsection.3.1}{Does shielding have something to say with this assignment? Explain}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.2}{What factors are causing the results to be not exactly identical for the cables? Explain your answer.}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Use termination card A with one of the cables.}{}% 17
+\BOOKMARK [2][-]{subsection.4.1}{Place a sheet of aluminium foil under the coils. How does this affect the result? Explain.}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.2}{On the bench there is probably other objects that may affect the results, and to some extent can bench itself affect the result. Try to move around a bit on the measurement configuration. Identify three objects or factors affecting measurement results, and explain how they affect.}{section.4}% 19
+\BOOKMARK [1][-]{section.5}{Measure the signal strength of the 50kHz signal for terminals A-F. Record the results in a table.}{}% 20
+\BOOKMARK [2][-]{subsection.5.1}{Is the inductive or capacitive noise that dominates for these terminations? Explain.}{section.5}% 21
+\BOOKMARK [2][-]{subsection.5.2}{Describe how the terminals A-F acts in relation to each other and how the differences between them are involved.}{section.5}% 22
+\BOOKMARK [1][-]{section.6}{Measure the signal strength of 50kHz signal in junction G-K. Record the results in a table.}{}% 23
+\BOOKMARK [2][-]{subsection.6.1}{Is the inductive or capacitive noise that dominates for these terminations? Explain.}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.2}{What is the biggest difference between the links in the C-F and G-K? Explain.}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.3}{Describe how the terminals G-K work and how the differences between them are involved.}{section.6}% 26
+\BOOKMARK [1][-]{section.7}{This lab assignments largely follows an attempt made by Ott in the 70s.}{}% 27
+\BOOKMARK [2][-]{subsection.7.1}{Unlike Ott we have more turns on the coils. How will it affect measuring our performance compared to capacitive and inductive noise transmitted? Explain your answer.}{section.7}% 28
+\BOOKMARK [2][-]{subsection.7.2}{ The results Ott obtained were respectively: 0, 0, 27, 13, 13, 28, 80, 55, 70, 63 and 77 dB attenuation of link A-K, relative to the connector A. The values we measure will vary somewhat in relation to Ott. To what extent the values vary between the terminals? Compare the results you got with the Ott's ones. Do the results seem reasonable? Can you point out possible causes of the differences that you find? \(is the tendency the same, or is there a discrepancy? Explain any discrepancies.\)}{section.7}% 29
+\BOOKMARK [1][-]{section.8}{Measure the signal strength for type A-K at 20kHz, 500kHz and 2MHz. Record the results in a table and create a graphical representation of the development.}{}% 30
+\BOOKMARK [2][-]{subsection.8.1}{How does the voltage of the function generator change for the different frequencies? \(HINT: is the voltage source ideal or is there an internal resistance...?\)}{section.8}% 31
+\BOOKMARK [2][-]{subsection.8.2}{How does the ratio between inductive and capacitive noise change with frequency? Explain.}{section.8}% 32
+\BOOKMARK [2][-]{subsection.8.3}{Some of the terminals perform worse in comparison to the others at high frequencies, while some are apparently better. What could be the reason? \(Comment the special relationship between H and J\).}{section.8}% 33
+\BOOKMARK [2][-]{subsection.8.4}{Compare these results with those from 50 kHz and those that Ott did. How and why do the characteristics of the various cables and termination types themselves change at higher frequencies?}{section.8}% 34
+\BOOKMARK [1][-]{section.9}{Measure the signal strength at 20, 50 and 500 kHz and 2MHz for termination A, C and G with the pure coax cable. Put these results in a table together with the results for STP cable from the task 5 and 8. \(In addition to measurement data you should make a row / column where you normalise with respect to A for each cable at the current rate\).}{}% 35
+\BOOKMARK [2][-]{subsection.9.1}{Which of the links G / C tells us most about the impedance of the shield being high or low? Explain your answer.}{section.9}% 36
+\BOOKMARK [2][-]{subsection.9.2}{Which of the cables \(pure coax vs STP\) has the lowest impedance in the shield? Explain the basis of your results.}{section.9}% 37
+\BOOKMARK [2][-]{subsection.9.3}{In the data sheet for STP cable is given a lead to lead capacitance of 112pF / m and capacitance between wire to shield of 220pF / m, while Coax have a capacitance of 54pF / m between wire and shield. How well does this fit with the measured results? Explain.}{section.9}% 38
+\BOOKMARK [1][-]{section.10}{Measure the signal strength at 20, 50 and 500 kHz and 2MHz for termination A, D and H twisted pair \(TP\) - and speaker \(HTT\) cables. Write down the results. Make a table where you normalize the results with respect to A for each frequency and cable.}{}% 39
+\BOOKMARK [2][-]{subsection.10.1}{Should coupling D or H tell us most about the effect of twisting? \(Explain your answer\)}{section.10}% 40
+\BOOKMARK [2][-]{subsection.10.2}{Have twisting any appreciable effect in this case, or are there other characteristics of cables that are more applicable here? Explain. \(Hint: dielectric properties ...\)}{section.10}% 41
+\BOOKMARK [1][-]{section.11}{For cat5e cable, there are three pairs.}{}% 42
+\BOOKMARK [2][-]{subsection.11.1}{Can you rank the green \(white sleeve pair 3\), orange \(yellow sleeve pair 2\) and brown \(red sleeve pair 4\) wire pairs according to which has more twist per meter, only based on measurements of noise? Explain the termination card and frequency \(s\) you want and why you want to use these. Write down the results of the measurements and explain your findings.}{section.11}% 43
+\BOOKMARK [2][-]{subsection.11.2}{See "cat5e" in Wikipedia. Compare this result with your table "Individual twist lengths" from Wikipedia. Are the results in disagreement? Explain.}{section.11}% 44
+\BOOKMARK [2][-]{subsection.11.3}{The white sleeve contains both the green \(pair 3\) and blue \(pair 1\) pairs. Let's consider the shielding properties of the cables by using termination H and I. Measure the noise level using the two terminations for 20kHz, 50kHz, 500kHz, and 2MHz.}{section.11}% 45
+\BOOKMARK [3][-]{subsubsection.11.3.1}{Does the blue pair act as shield for the green pair? What shield effect can we see here?}{subsection.11.3}% 46
+\BOOKMARK [3][-]{subsubsection.11.3.2}{Compare this result with the difference between H and I in task 5 and 8. Explain any differences and similarities.}{subsection.11.3}% 47
