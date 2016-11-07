@@ -136,7 +136,8 @@ Mandatory task 2}
 \end{figure}
 
 %% TASK 2
-\section{In this experiment, we use a lot the decibel scale. $VdB = 20log \big(\frac{Vpp}{\sqrt{2}}\big)$. \\What describes the greatest change: Going from -21 to -23 dB, or to go from -72 to -78dB? (Calculate and explain).}
+\section{In this experiment, we use a lot the decibel scale. $VdB = 20log \big(\frac{Vpp}{\sqrt{2}}\big)$. \\
+What describes the greatest change: Going from -21 to -23 dB, or to go from -72 to -78dB? (Calculate and explain).}
 -21 and -23 dB correspond to 0.12604 and 0.10012 $V_{rms}$. The difference is 0.02592. \\
 Similarly -72 and -78 dB correspond 0.00036 to and 0.00018 $V_{rms}$. The difference is 0.00018. \\
 This means -21 to -23 dB is the greatest change in dB scale.
@@ -226,12 +227,27 @@ There can be other factors for our observations being different than that of Ott
 
 %% TASK 8
 \section{Measure the signal strength for type A-K at 20kHz, 500kHz and 2MHz. Record the results in a table and create a graphical representation of the development.}
-Figure is the tabular presentation of input and output signal strength with A-K termination at 20 kHz, 500 kHz and 2 MHz. Similarly figure and shows the signal strength plots for input and output against frequency for all terminations. 
+Figure \ref{fig:task8} is the tabular presentation of input and output signal strength with A-K termination at 20 kHz, 500 kHz and 2 MHz. Similarly figure  \ref{fig:task8in} and  \ref{fig:task8out} shows the signal strength plots for input at the primary and output at the secondary coil  against frequency for all terminations.
+
 \begin{figure} [H] %% table as picx
   \centering 
-  \includegraphics[width=0.9\textwidth]{img/task8_data.pdf} 
+  \includegraphics[width=1\textwidth]{img/task8_data.pdf} 
   \caption{Termination A-K observations at different frequency}
   \label{fig:task8} 
+\end{figure}
+
+\begin{figure} [H] %% table as picx
+  \centering 
+  \includegraphics[width=0.85\textwidth]{img/input.eps} 
+  \caption{Input strength with A-K terminations}
+  \label{fig:task8in} 
+\end{figure}
+
+\begin{figure} [H] %% table as picx
+  \centering 
+  \includegraphics[width=0.85\textwidth]{img/output.eps} 
+  \caption{Output strength with A-K terminations}
+  \label{fig:task8out} 
 \end{figure}
 
 \subsection{How does the voltage of the function generator change for the different frequencies? (HINT: is the voltage source ideal or is there an internal resistance...?)} 
@@ -241,10 +257,10 @@ At low frequency the voltage of the function generator is much less because the 
 At low frequency both capacitive and inductive noise are linearly proportional to frequency whereas at higher frequency both noises are independent of frequency. Hence the ratio is constant over frequency.
 
 \subsection{Some of the terminals perform worse in comparison to the others at high frequencies, while some are apparently better. What could be the reason? (Comment the special relationship between H and J).}
-reason.....
+We can comapare termination H and J performance in \ref{fig:task8out}. It is seen that J performs better at high frequency than H. Physically, H is TP only but J is STP which is like TP and coax together. At higher frequency due to skin effect, the noise current flows from the outer surface of the coax, thereby decreasing its effect on the signal current flowing on the core conductor. Hence J performs better at higher frequency than H.
 
 \subsection{Compare these results with those from 50 kHz and those that Ott did. How and why do the characteristics of the various cables and termination types themselves change at higher frequencies?}
-compare .....
+The parameters of conductor and shield like characteristic impedance and reactance are frequency dependent. In addition at higher frequency, effects like skin effect comes into play which changes current distrubution in the conductors. These factors change the characteristics of cables and terminations at higher frequencies.
 
 %% TASK 9
 \section{Measure the signal strength at 20, 50 and 500 kHz and 2MHz for termination A, C and G with the pure coax cable. Put these results in a table together with the results for STP cable from the task 5 and 8. (In addition to measurement data you should make a row / column where you normalise with respect to A for each cable at the current rate).}
@@ -262,7 +278,7 @@ Termination G tells us about the impedance of the shield being high or low becau
 In our results above the average signal strength in STP is less than that in coax. Hence it can be said that STP has the lowest impedance.
 
 \subsection{In the data sheet for STP cable is given a lead to lead capacitance of 112pF / m and capacitance between wire to shield of 220pF / m, while Coax have a capacitance of 54pF / m between wire and shield. How well does this fit with the measured results? Explain.}
-may be compute....
+We know that larger the capacitance between shield and concducting wire, less is the capacitive coupling. From the data sheet, it is known that STP has larger capacitance between wire to shield than coax and from the above results, we can see that STP performs better than coax. Hence we can conclude that data sheet specification fits with our measured results. 
 
 %%TASK 10
 \section{Measure the signal strength at 20, 50 and 500 kHz and 2MHz for termination A, D and H twisted pair (TP) - and speaker (HTT) cables. Write down the results. Make a table where you normalize the results with respect to A for each frequency and cable.}
