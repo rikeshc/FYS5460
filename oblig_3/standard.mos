@@ -1,0 +1,1309 @@
+* Copyright © 2000, 2001, 2002, 2003, 2004, 2005 Linear Technology Corporation.   All rights reserved.
+*
+.model FDS6680A VDMOS(Rg=3 Rd=5m Rs=1m Vto=2.2 Kp=63 Cgdmax=2n Cgdmin=1n Cgs=1.9n Cjo=1n Is=2.3p Rb=6m mfg=Fairchild Vds=30 Ron=15m Qg=27n)
+.model IRF7201 VDMOS(Rg=3 Rs=12m Rd=5m Vto=2.64 Kp=26 Cgdmax=650p Cgdmin=135p Cgs=620p Cjo=620p a=1.5 Is=2.4p Rb=11m N=1.07 mfg=International_Rectifier Vds=30 Ron=30m Qg=28n)
+.model IRF7303 VDMOS(Rg=3 Rs=30m Rd=10m Vto=2.3 Kp=15 Cgdmax=800p Cgdmin=10p Cgs=500p Cjo=500p a=1.5 Is=39p Rb=66m N=1.24 Vds=30 Ron=50m Qg=25n mfg=International_Rectifier)
+.model NDS9410A VDMOS(Rg=3 Rs=15m Rd=8m Vto=2.7 Kp=24.5 Cgdmax=950p Cgdmin=320p Cgs=1020p Cjo=940p a=0.1 Is=.82p Rb=12m N=1.02 mfg=Fairchild Vds=30 Ron=42m Qg=50n)
+.model Si4410DY VDMOS(Rg=3 Rd=3m Rs=3m Vto=2.6 Kp=60 Cgdmax=1.9n Cgdmin=50p Cgs=3.1n Cjo=1n Is=5.5p Rb=5.7m mfg=Siliconix Vds=30 Ron=15m Qg=60n)
+.model Si4412DY VDMOS(Rg=3 Rd=5m Rs=8m Vto=2.5 Kp=27 Cgdmax=820p Cgdmin=50p Cgs=1050p Cjo=1000p Is=.365n Rb=0.00719 N=1.27 mfg=Siliconix Vds=30 Ron=30m Qg=29n)
+.model Si4420DY VDMOS(Rg=3 Rd=2m Rs=2m Vto=2.7 Kp=100 Cgdmax=1.5n Cgdmin=200p Cgs=4.8n Cjo=2n Is=11p Rb=3.9m N=1.07 mfg=Siliconix Vds=30 Ron=13m Qg=53n)
+.model Si9936DY VDMOS(Rg=3 Rd=10m Rs=2m Vto=2.3 Kp=11 Cgdmax=580p Cgdmin=20p Cgs=560p Cjo=800p Is=7.94p Rb=16.9m mfg=Siliconix Vds=30 Ron=80m Qg=35n)
+.model SUD40N10-25 VDMOS(Rg=3 Rd=10m Rs=5m Vto=2.3 Kp=70 lambda=.01 Cgdmax=2n Cgdmin=100p Cgs=1.9n Cjo=1.25n Is=0.0055n Rb=0.005 mfg=Siliconix Vds=100 Ron=25m Qg=60n)
+.model FDC638P VDMOS(pchan Rg=3 Rd=14m Rs=11m Vto=-1.1 Kp=22 cgdmax=1.1n cgdmin=0.08n cgs=1.0n Cjo=1n Is=5pA Rb=21m N=1.0 mfg=Fairchild Vds=-20 Ron=39m Qg=13n)
+.model FDS6375 VDMOS(pchan Rg=3 Rd=8m Rs=6m Vto=-1.05 Kp=52 cgdmax=1.5n cgdmin=.4n cgs=1.9n Cjo=1n Is=0.48nA Rb=19.4m N=1.13 mfg=Fairchild Vds=-20 Ron=19m Qg=23n)
+.model FDS6575 VDMOS(pchan Rg=3 Rd=4m Rs=2.4m Vto=-1.08 Kp=100 cgdmax=4.4n cgdmin=0.5n cgs=3.6n Cjo=1n Is=0.1nA Rb=10m N=1.0 mfg=Fairchild Vds=-20 Ron=10m Qg=50n)
+.model Si9803DY VDMOS(pchan Rg=3 Rd=16m Rs=3m Vto=-1.4 Kp=22 cgdmax=1.4n cgdmin=.30n cgs=1.1n Cjo=1n Is=0.023nA Rb=9.6m N=1.09 mfg=Siliconix Vds=-25 Ron=33m Qg=15.8n)
+.model SI3443DV VDMOS(pchan Rg=3 Rd=22m Rs=8m Vto=-1.05 Kp=12.2 cgdmax=.32n cgdmin=.16n cgs=1.1n Cjo=1n Is=0.011nA Rb=0.022 N=1.12 mfg=Siliconix Vds=-20 Ron=58m Qg=8.5n)
+.model SI3445DV VDMOS(pchan Rg=3 Rd=15m Rs=6m Vto=-.85 Kp=18 cgdmax=1.0n cgdmin=.44n cgs=1.2n Cjo=.1n Is=.045nA Rb=0.026 N=1.127 mfg=Siliconix Vds=-8 Ron=34m Qg=15n)
+.model FDS6570A VDMOS(Rg=3 Rd=3.0m Rs=2.3m Vto=2 Kp=95 Cgdmax=1.9n Cgdmin=0.24n Cgs=3.1n Cjo=0.94n Is=94p Rb=3.8m mfg=Fairchild Vds=20 Ron=7.5m Qg=47n)
+.model FDS6890A VDMOS(Rg=3 Rd=7.6m Rs=5.7m Vto=2 Kp=72 Cgdmax=0.9n Cgdmin=0.12n Cgs=1.5n Cjo=0.46n Is=46p Rb=9.5m mfg=Fairchild Vds=20 Ron=19m Qg=23n)
+.model FDS6670A VDMOS(Rg=3 Rd=4.0m Rs=3.0m Vto=2 Kp=90 Cgdmax=1.4n Cgdmin=0.18n Cgs=2.3n Cjo=0.70n Is=70p Rb=5.0m mfg=Fairchild Vds=30 Ron=10m Qg=35n)
+.model FDS6680  VDMOS(Rg=3 Rd=6.0m Rs=4.5m Vto=2 Kp=80 Cgdmax=0.8n Cgdmin=0.10n Cgs=1.3n Cjo=0.38n Is=38p Rb=7.5m mfg=Fairchild Vds=30 Ron=15m Qg=19n)
+.model FDS6690A VDMOS(Rg=3 Rd=6.8m Rs=5.1m Vto=2 Kp=76 Cgdmax=0.7n Cgdmin=0.09n Cgs=1.1n Cjo=0.34n Is=34p Rb=8.5m mfg=Fairchild Vds=30 Ron=17m Qg=17n)
+.model FDS4410  VDMOS(Rg=3 Rd=8.0m Rs=6.0m Vto=2 Kp=70 Cgdmax=0.5n Cgdmin=0.07n Cgs=0.9n Cjo=0.26n Is=26p Rb=10.0m mfg=Fairchild Vds=30 Ron=20m Qg=13n)
+.model FDS6614A VDMOS(Rg=3 Rd=10.0m Rs=7.5m Vto=2 Kp=60 Cgdmax=0.5n Cgdmin=0.06n Cgs=0.8n Cjo=0.24n Is=24p Rb=12.5m mfg=Fairchild Vds=30 Ron=25m Qg=12n)
+.model FDS6612A VDMOS(Rg=3 Rd=12.0m Rs=9.0m Vto=2 Kp=50 Cgdmax=0.4n Cgdmin=0.05n Cgs=0.6n Cjo=0.18n Is=18p Rb=15.0m mfg=Fairchild Vds=30 Ron=30m Qg=9n)
+.model FDS6912A VDMOS(Rg=3 Rd=14.0m Rs=10.5m Vto=2 Kp=40 Cgdmax=0.4n Cgdmin=0.05n Cgs=0.6n Cjo=0.18n Is=18p Rb=17.5m mfg=Fairchild Vds=30 Ron=35m Qg=9n)
+.model FDS6912  VDMOS(Rg=3 Rd=16.8m Rs=12.6m Vto=2 Kp=26 Cgdmax=0.3n Cgdmin=0.04n Cgs=0.5n Cjo=0.14n Is=14p Rb=21.0m mfg=Fairchild Vds=30 Ron=42m Qg=7n)
+.model FDS6630A VDMOS(Rg=3 Rd=21.2m Rs=15.9m Vto=2 Kp=4 Cgdmax=0.2n Cgdmin=0.03n Cgs=0.3n Cjo=0.10n Is=10p Rb=26.5m mfg=Fairchild Vds=30 Ron=53m Qg=5n)
+.model FDS6930A VDMOS(Rg=3 Rd=22.0m Rs=16.5m Vto=2 Kp=0 Cgdmax=0.2n Cgdmin=0.03n Cgs=0.3n Cjo=0.10n Is=10p Rb=27.5m mfg=Fairchild Vds=30 Ron=55m Qg=5n)
+.model FDS6961A VDMOS(Rg=3 Rd=56.0m Rs=42.0m Vto=2 Kp=5 Cgdmax=0.1n Cgdmin=0.01n Cgs=0.1n Cjo=0.04n Is=4p Rb=70.0m mfg=Fairchild Vds=30 Ron=140m Qg=2n)
+.model FDS5680  VDMOS(Rg=3 Rd=10.0m Rs=7.5m Vto=2 Kp=60 Cgdmax=1.2n Cgdmin=0.15n Cgs=2.0n Cjo=0.60n Is=60p Rb=12.5m mfg=Fairchild Vds=60 Ron=25m Qg=30n)
+.model FDS5690  VDMOS(Rg=3 Rd=13.2m Rs=9.9m Vto=2 Kp=44 Cgdmax=0.9n Cgdmin=0.12n Cgs=1.5n Cjo=0.46n Is=46p Rb=16.5m mfg=Fairchild Vds=60 Ron=33m Qg=23n)
+.model FDS3570  VDMOS(Rg=3 Rd=8.8m Rs=6.6m Vto=2 Kp=66 Cgdmax=2.2n Cgdmin=0.27n Cgs=3.6n Cjo=1.08n Is=108p Rb=11.0m mfg=Fairchild Vds=80 Ron=22m Qg=54n)
+.model FDS3580  VDMOS(Rg=3 Rd=12.4m Rs=9.3m Vto=2 Kp=48 Cgdmax=1.4n Cgdmin=0.17n Cgs=2.3n Cjo=0.68n Is=68p Rb=15.5m mfg=Fairchild Vds=80 Ron=31m Qg=34n)
+.model Si4836DY VDMOS(Rg=3 Rd=1.2m Rs=0.9m Vto=2 Kp=104 Cgdmax=1.4n Cgdmin=0.18n Cgs=2.4n Cjo=0.72n Is=72p Rb=1.5m mfg=Siliconix Vds=12 Ron=3m Qg=36n)
+.model Si4838DY VDMOS(Rg=3 Rd=1.2m Rs=0.9m Vto=2 Kp=104 Cgdmax=1.6n Cgdmin=0.20n Cgs=2.7n Cjo=0.80n Is=80p Rb=1.5m mfg=Siliconix Vds=12 Ron=3m Qg=40n)
+.model Si4866DY VDMOS(Rg=3 Rd=2.2m Rs=1.7m Vto=2 Kp=99 Cgdmax=0.8n Cgdmin=0.11n Cgs=1.4n Cjo=0.42n Is=42p Rb=2.8m mfg=Siliconix Vds=12 Ron=5.5m Qg=21n)
+.model Si4862DY VDMOS(Rg=3 Rd=1.3m Rs=1.0m Vto=2 Kp=103 Cgdmax=1.9n Cgdmin=0.24n Cgs=3.1n Cjo=0.94n Is=94p Rb=1.7m mfg=Siliconix Vds=16 Ron=3.3m Qg=47n)
+.model Si4864DY VDMOS(Rg=3 Rd=1.4m Rs=1.1m Vto=2 Kp=103 Cgdmax=1.9n Cgdmin=0.24n Cgs=3.1n Cjo=0.94n Is=94p Rb=1.8m mfg=Siliconix Vds=20 Ron=3.5m Qg=47n)
+.model Si4876DY VDMOS(Rg=3 Rd=2.0m Rs=1.5m Vto=2 Kp=100 Cgdmax=2.2n Cgdmin=0.28n Cgs=3.7n Cjo=1.10n Is=110p Rb=2.5m mfg=Siliconix Vds=20 Ron=5m Qg=55n)
+.model Si4466DY VDMOS(Rg=3 Rd=3.6m Rs=2.7m Vto=2 Kp=92 Cgdmax=2.0n Cgdmin=0.25n Cgs=3.3n Cjo=1.00n Is=100p Rb=4.5m mfg=Siliconix Vds=20 Ron=9m Qg=50n)
+.model Si9426DY VDMOS(Rg=3 Rd=5.2m Rs=3.9m Vto=2 Kp=84 Cgdmax=1.9n Cgdmin=0.24n Cgs=3.1n Cjo=0.94n Is=94p Rb=6.5m mfg=Siliconix Vds=20 Ron=13m Qg=47n)
+.model Si4426DY VDMOS(Rg=3 Rd=10.0m Rs=7.5m Vto=2 Kp=60 Cgdmax=1.0n Cgdmin=0.13n Cgs=1.7n Cjo=0.50n Is=50p Rb=12.5m mfg=Siliconix Vds=20 Ron=25m Qg=25n)
+.model Si9428DY VDMOS(Rg=3 Rd=12.0m Rs=9.0m Vto=2 Kp=50 Cgdmax=0.8n Cgdmin=0.11n Cgs=1.4n Cjo=0.42n Is=42p Rb=15.0m mfg=Siliconix Vds=20 Ron=30m Qg=21n)
+.model Si9804DY VDMOS(Rg=3 Rd=9.2m Rs=6.9m Vto=2 Kp=64 Cgdmax=0.5n Cgdmin=0.07n Cgs=0.9n Cjo=0.27n Is=27p Rb=11.5m mfg=Siliconix Vds=25 Ron=23m Qg=13.5n)
+.model Si4442DY VDMOS(Rg=3 Rd=2.0m Rs=1.5m Vto=2 Kp=100 Cgdmax=1.4n Cgdmin=0.18n Cgs=2.4n Cjo=0.72n Is=72p Rb=2.5m mfg=Siliconix Vds=30 Ron=5m Qg=36n)
+.model Si4364DY VDMOS(Rg=3 Rd=2.2m Rs=1.7m Vto=2 Kp=99 Cgdmax=2.5n Cgdmin=0.31n Cgs=4.1n Cjo=1.24n Is=124p Rb=2.8m mfg=Siliconix Vds=30 Ron=5.5m Qg=62n)
+.model Si4842DY VDMOS(Rg=3 Rd=2.4m Rs=1.8m Vto=2 Kp=98 Cgdmax=1.0n Cgdmin=0.13n Cgs=1.7n Cjo=0.50n Is=50p Rb=3.0m mfg=Siliconix Vds=30 Ron=6m Qg=25n)
+.model Si4362DY VDMOS(Rg=3 Rd=2.5m Rs=1.9m Vto=2 Kp=98 Cgdmax=1.6n Cgdmin=0.20n Cgs=2.7n Cjo=0.80n Is=80p Rb=3.1m mfg=Siliconix Vds=30 Ron=6.25m Qg=40n)
+.model Si4404DY VDMOS(Rg=3 Rd=3.2m Rs=2.4m Vto=2 Kp=94 Cgdmax=1.4n Cgdmin=0.18n Cgs=2.4n Cjo=0.72n Is=72p Rb=4.0m mfg=Siliconix Vds=30 Ron=8m Qg=36n)
+.model Si4430DY VDMOS(Rg=3 Rd=3.2m Rs=2.4m Vto=2 Kp=94 Cgdmax=1.4n Cgdmin=0.18n Cgs=2.4n Cjo=0.72n Is=72p Rb=4.0m mfg=Siliconix Vds=30 Ron=8m Qg=36n)
+.model Si4872DY VDMOS(Rg=3 Rd=4.0m Rs=3.0m Vto=2 Kp=90 Cgdmax=1.1n Cgdmin=0.14n Cgs=1.8n Cjo=0.54n Is=54p Rb=5.0m mfg=Siliconix Vds=30 Ron=10m Qg=27n)
+.model Si4874DY VDMOS(Rg=3 Rd=4.0m Rs=3.0m Vto=2 Kp=90 Cgdmax=1.4n Cgdmin=0.18n Cgs=2.3n Cjo=0.70n Is=70p Rb=5.0m mfg=Siliconix Vds=30 Ron=10m Qg=35n)
+.model Si4888DY VDMOS(Rg=3 Rd=4.0m Rs=3.0m Vto=2 Kp=90 Cgdmax=0.7n Cgdmin=0.08n Cgs=1.1n Cjo=0.33n Is=32.6p Rb=5.0m mfg=Siliconix Vds=30 Ron=10m Qg=16.3n)
+.model Si4860DY VDMOS(Rg=3 Rd=4.4m Rs=3.3m Vto=2 Kp=88 Cgdmax=0.5n Cgdmin=0.07n Cgs=0.9n Cjo=0.26n Is=26p Rb=5.5m mfg=Siliconix Vds=30 Ron=11m Qg=13n)
+.model Si4886DY VDMOS(Rg=3 Rd=5.2m Rs=3.9m Vto=2 Kp=84 Cgdmax=0.6n Cgdmin=0.07n Cgs=1.0n Cjo=0.29n Is=29p Rb=6.5m mfg=Siliconix Vds=30 Ron=13m Qg=14.5n)
+.model Si4822DY VDMOS(Rg=3 Rd=6.0m Rs=4.5m Vto=2 Kp=80 Cgdmax=1.2n Cgdmin=0.16n Cgs=2.1n Cjo=0.62n Is=62p Rb=7.5m mfg=Siliconix Vds=30 Ron=15m Qg=31n)
+.model Si4884DY VDMOS(Rg=3 Rd=6.4m Rs=4.8m Vto=2 Kp=78 Cgdmax=0.6n Cgdmin=0.08n Cgs=1.0n Cjo=0.31n Is=30.6p Rb=8.0m mfg=Siliconix Vds=30 Ron=16m Qg=15.3n)
+.model Si4894DY VDMOS(Rg=3 Rd=7.2m Rs=5.4m Vto=2 Kp=74 Cgdmax=0.8n Cgdmin=0.10n Cgs=1.3n Cjo=0.40n Is=40p Rb=9.0m mfg=Siliconix Vds=30 Ron=18m Qg=20n)
+.model Si4820DY VDMOS(Rg=3 Rd=8.0m Rs=6.0m Vto=2 Kp=70 Cgdmax=0.8n Cgdmin=0.10n Cgs=1.3n Cjo=0.40n Is=40p Rb=10.0m mfg=Siliconix Vds=30 Ron=20m Qg=20n)
+.model Si4882DY VDMOS(Rg=3 Rd=8.0m Rs=6.0m Vto=2 Kp=70 Cgdmax=0.5n Cgdmin=0.07n Cgs=0.9n Cjo=0.27n Is=27p Rb=10.0m mfg=Siliconix Vds=30 Ron=20m Qg=13.5n)
+.model Si4890DY VDMOS(Rg=3 Rd=8.0m Rs=6.0m Vto=2 Kp=70 Cgdmax=0.6n Cgdmin=0.07n Cgs=0.9n Cjo=0.28n Is=28.4p Rb=10.0m mfg=Siliconix Vds=30 Ron=20m Qg=14.2n)
+.model Si4892DY VDMOS(Rg=3 Rd=8.0m Rs=6.0m Vto=2 Kp=70 Cgdmax=0.3n Cgdmin=0.04n Cgs=0.6n Cjo=0.17n Is=17.4p Rb=10.0m mfg=Siliconix Vds=30 Ron=20m Qg=8.7n)
+.model Si4416DY VDMOS(Rg=3 Rd=11.2m Rs=8.4m Vto=2 Kp=54 Cgdmax=0.5n Cgdmin=0.07n Cgs=0.9n Cjo=0.26n Is=26p Rb=14.0m mfg=Siliconix Vds=30 Ron=28m Qg=13n)
+.model Si4802DY VDMOS(Rg=3 Rd=12.0m Rs=9.0m Vto=2 Kp=50 Cgdmax=0.5n Cgdmin=0.07n Cgs=0.9n Cjo=0.26n Is=26p Rb=15.0m mfg=Siliconix Vds=30 Ron=30m Qg=13n)
+.model Si4800DY VDMOS(Rg=3 Rd=7.2m Rs=5.4m Vto=2 Kp=74 Cgdmax=0.3n Cgdmin=0.04n Cgs=0.6n Cjo=0.17n Is=17.4p Rb=9.0m mfg=Siliconix Vds=30 Ron=18m Qg=8.7n)
+.model Si9410DY VDMOS(Rg=3 Rd=20.0m Rs=15.0m Vto=2 Kp=10 Cgdmax=1.0n Cgdmin=0.12n Cgs=1.6n Cjo=0.48n Is=48p Rb=25.0m mfg=Siliconix Vds=30 Ron=50m Qg=24n)
+.model Si9436DY VDMOS(Rg=3 Rd=24.0m Rs=18.0m Vto=2 Kp=15 Cgdmax=0.6n Cgdmin=0.07n Cgs=0.9n Cjo=0.28n Is=28p Rb=30.0m mfg=Siliconix Vds=30 Ron=60m Qg=14n)
+.model Si4840DY VDMOS(Rg=3 Rd=4.8m Rs=3.6m Vto=2 Kp=86 Cgdmax=0.7n Cgdmin=0.09n Cgs=1.2n Cjo=0.37n Is=37p Rb=6.0m mfg=Siliconix Vds=40 Ron=12m Qg=18.5n)
+.model Si4470DY VDMOS(Rg=3 Rd=5.2m Rs=3.9m Vto=2 Kp=84 Cgdmax=1.8n Cgdmin=0.23n Cgs=3.1n Cjo=0.92n Is=92p Rb=6.5m mfg=Siliconix Vds=60 Ron=13m Qg=46n)
+.model Si4450DY VDMOS(Rg=3 Rd=12.0m Rs=9.0m Vto=2 Kp=50 Cgdmax=1.2n Cgdmin=0.16n Cgs=2.1n Cjo=0.62n Is=62p Rb=15.0m mfg=Siliconix Vds=60 Ron=30m Qg=31n)
+.model Si4850EY VDMOS(Rg=3 Rd=12.4m Rs=9.3m Vto=2 Kp=48 Cgdmax=0.7n Cgdmin=0.09n Cgs=1.2n Cjo=0.36n Is=36p Rb=15.5m mfg=Siliconix Vds=60 Ron=31m Qg=18n)
+.model Si4896DY VDMOS(Rg=3 Vto=2 Rd=8.8m Rs=6.6m Rb=11m Kp=66.0 Cgdmax=1.4n Cgdmin=0.34n Cgs=2.3n Cjo=0.68n Is=68p mfg=Siliconix Vds=80 Ron=22m Qg=34n)
+.model Si4480DY VDMOS(Rg=3 Rd=16.0m Rs=12.0m Vto=2 Kp=30 Cgdmax=1.2n Cgdmin=0.15n Cgs=2.0n Cjo=0.60n Is=60p Rb=20.0m mfg=Siliconix Vds=80 Ron=40m Qg=30n)
+.model Si4980DY VDMOS(Rg=3 Rd=38.0m Rs=28.5m Vto=2 Kp=9 Cgdmax=0.6n Cgdmin=0.08n Cgs=1.0n Cjo=0.30n Is=30p Rb=47.5m mfg=Siliconix Vds=80 Ron=95m Qg=15n)
+.model Si4486EY VDMOS(Rg=3 Rd=11.2m Rs=8.4m Vto=2 Kp=54 Cgdmax=1.4n Cgdmin=0.18n Cgs=2.4n Cjo=0.72n Is=72p Rb=14.0m mfg=Siliconix Vds=100 Ron=28m Qg=36n)
+.model Si4484EY VDMOS(Rg=3 Rd=16.0m Rs=12.0m Vto=2 Kp=30 Cgdmax=1.0n Cgdmin=0.12n Cgs=1.6n Cjo=0.48n Is=48p Rb=20.0m mfg=Siliconix Vds=100 Ron=40m Qg=24n)
+.model Si4482DY VDMOS(Rg=3 Rd=32.0m Rs=24.0m Vto=2 Kp=10 Cgdmax=1.2n Cgdmin=0.15n Cgs=2.0n Cjo=0.60n Is=60p Rb=40.0m mfg=Siliconix Vds=100 Ron=80m Qg=30n)
+.model Si4982DY VDMOS(Rg=3 Rd=72.0m Rs=54.0m Vto=2 Kp=7 Cgdmax=0.6n Cgdmin=0.08n Cgs=1.0n Cjo=0.30n Is=30p Rb=90.0m mfg=Siliconix Vds=100 Ron=180m Qg=15n)
+.model Si4848DY VDMOS(Rg=3 Rd=38.0m Rs=28.5m Vto=2 Kp=8 Cgdmax=0.7n Cgdmin=0.09n Cgs=1.1n Cjo=0.34n Is=34p Rb=47.5m mfg=Siliconix Vds=150 Ron=95m Qg=17n)
+.model Si4488DY VDMOS(Rg=3 Rd=20.0m Rs=15.0m Vto=2 Kp=10 Cgdmax=1.2n Cgdmin=0.15n Cgs=2.0n Cjo=0.60n Is=60p Rb=25.0m mfg=Siliconix Vds=150 Ron=50m Qg=30n)
+.model Si9420DY VDMOS(Rg=3 Rd=400.0m Rs=300.0m Vto=2 Kp=5 Cgdmax=0.3n Cgdmin=0.04n Cgs=0.6n Cjo=0.17n Is=17.2p Rb=500.0m mfg=Siliconix Vds=200 Ron=1000m Qg=8.6n)
+.model IRF7456 VDMOS(Rg=3 Rd=2.6m Rs=2.0m Vto=2 Kp=97 Cgdmax=1.6n Cgdmin=0.21n Cgs=2.7n Cjo=0.82n Is=82p Rb=3.3m mfg=International_Rectifier Vds=20 Ron=6.5m Qg=41n)
+.model IRF7455 VDMOS(Rg=3 Rd=3.0m Rs=2.3m Vto=2 Kp=95 Cgdmax=1.5n Cgdmin=0.19n Cgs=2.5n Cjo=0.74n Is=74p Rb=3.8m mfg=International_Rectifier Vds=30 Ron=7.5m Qg=37n)
+.model IRF7401 VDMOS(Rg=3 Rd=8.8m Rs=6.6m Vto=2 Kp=66 Cgdmax=1.6n Cgdmin=0.20n Cgs=2.7n Cjo=0.80n Is=80p Rb=11.0m mfg=International_Rectifier Vds=20 Ron=22m Qg=40n)
+.model IRF9410 VDMOS(Rg=3 Rd=12.0m Rs=9.0m Vto=2 Kp=50 Cgdmax=0.7n Cgdmin=0.09n Cgs=1.2n Cjo=0.36n Is=36p Rb=15.0m mfg=International_Rectifier Vds=30 Ron=30m Qg=18n)
+.model IRF7807 VDMOS(Rg=3 Rd=10.0m Rs=7.5m Vto=2 Kp=60 Cgdmax=0.7n Cgdmin=0.09n Cgs=1.1n Cjo=0.34n Is=34p Rb=12.5m mfg=International_Rectifier Vds=30 Ron=25m Qg=17n)
+.model IRF7403 VDMOS(Rg=3 Rd=8.8m Rs=6.6m Vto=2 Kp=66 Cgdmax=1.7n Cgdmin=0.21n Cgs=2.8n Cjo=0.84n Is=84p Rb=11.0m mfg=International_Rectifier Vds=30 Ron=22m Qg=42n)
+.model IRF7413A VDMOS(Rg=3 Rd=5.4m Rs=4.1m Vto=2 Kp=83 Cgdmax=2.1n Cgdmin=0.26n Cgs=3.5n Cjo=1.04n Is=104p Rb=6.8m mfg=International_Rectifier Vds=30 Ron=13.5m Qg=52n)
+.model IRF7413 VDMOS(Rg=3 Rd=4.4m Rs=3.3m Vto=2 Kp=88 Cgdmax=1.4n Cgdmin=0.17n Cgs=2.3n Cjo=0.68n Is=68p Rb=5.5m mfg=International_Rectifier Vds=30 Ron=11m Qg=34n)
+.model IRF7805 VDMOS(Rg=3 Rd=4.4m Rs=3.3m Vto=2 Kp=88 Cgdmax=1.2n Cgdmin=0.16n Cgs=2.1n Cjo=0.62n Is=62p Rb=5.5m mfg=International_Rectifier Vds=30 Ron=11m Qg=31n)
+.model IRF7809A VDMOS(Rg=3 Rd=3.4m Rs=2.6m Vto=2 Kp=93 Cgdmax=2.4n Cgdmin=0.31n Cgs=4.1n Cjo=1.22n Is=122p Rb=4.3m mfg=International_Rectifier Vds=30 Ron=8.5m Qg=61n)
+.model IRF7811 VDMOS(Rg=3 Rd=3.4m Rs=2.6m Vto=2 Kp=93 Cgdmax=0.8n Cgdmin=0.10n Cgs=1.3n Cjo=0.38n Is=38p Rb=4.3m mfg=International_Rectifier Vds=30 Ron=8.5m Qg=19n)
+.model IRF7832 VDMOS(Rg=3 Rd=1.6m Rs=1.2m Vto=2.2 Kp=112 Cgdmax=2.4n Cgdmin=0.17n Cgs=4.3n Cjo=0.68n Is=68p Rb=2m mfg=International_Rectifier Vds=30 Ron=4m Qg=34n)
+.model BSH114 VDMOS(Rg=3 Rd=0.2 Rs=0.2 Vto=3  Kp=1.5 Cgdmax=0.2n Cgdmin=0.02n Cgs=0.3n Cjo=0.09n Is=9.2p Rb=0.3  mfg=Philips Vds=100 Ron=0.5  Qg=4.6n)
+.model IRF7205 VDMOS(pchan Rg=3 Rd=28.0m Rs=21.0m Vto=-1 Kp=10 Cgdmax=1.1n Cgdmin=0.14n Cgs=1.8n Cjo=0.54n Is=54p Rb=35.0m mfg=International_Rectifier Vds=-30 Ron=70m Qg=27n)
+.model IRF7406 VDMOS(pchan Rg=3 Rd=18.0m Rs=13.5m Vto=-1 Kp=20 Cgdmax=1.4n Cgdmin=0.18n Cgs=2.4n Cjo=0.72n Is=72p Rb=22.5m mfg=International_Rectifier Vds=-30 Ron=45m Qg=36n)
+.model IRF7207 VDMOS(pchan Rg=3 Rd=32.0m Rs=24.0m Vto=-1 Kp=8 Cgdmax=0.6n Cgdmin=0.08n Cgs=1.0n Cjo=0.30n Is=30p Rb=40.0m mfg=International_Rectifier Vds=-20 Ron=80m Qg=15n)
+.model IRF7204 VDMOS(pchan Rg=3 Rd=24.0m Rs=18.0m Vto=-1 Kp=15 Cgdmax=1.0n Cgdmin=0.13n Cgs=1.7n Cjo=0.50n Is=50p Rb=30.0m mfg=International_Rectifier Vds=-20 Ron=60m Qg=25n)
+.model IRF7404 VDMOS(pchan Rg=3 Rd=16.0m Rs=12.0m Vto=-1 Kp=30 Cgdmax=1.6n Cgdmin=0.20n Cgs=2.7n Cjo=0.80n Is=80p Rb=20.0m mfg=International_Rectifier Vds=-20 Ron=40m Qg=40n)
+.model Si9407AEY VDMOS(pchan Rg=3 Rd=60.0m Rs=45.0m Vto=-1 Kp=5 Cgdmax=0.7n Cgdmin=0.09n Cgs=1.2n Cjo=0.36n Is=36p Rb=75.0m mfg=Siliconix Vds=-60 Ron=150m Qg=18n)
+.model IRF7210 VDMOS(pchan Rg=3 Rd=2.0m Rs=1.5m Vto=-1 Kp=100 Cgdmax=8.5n Cgdmin=1.06n Cgs=14.1n Cjo=4.24n Is=424p Rb=2.5m mfg=International_Rectifier Vds=-12 Ron=5m Qg=212n)
+.model IRF7233 VDMOS(pchan Rg=3 Rd=8.0m Rs=6.0m Vto=-1 Kp=70 Cgdmax=2.0n Cgdmin=0.25n Cgs=3.3n Cjo=0.98n Is=98p Rb=10.0m mfg=International_Rectifier Vds=-12 Ron=20m Qg=49n)
+.model IRF7220 VDMOS(pchan Rg=3 Rd=4.8m Rs=3.6m Vto=-.75 Kp=86 Cgdmax=1.5n Cgdmin=4.25n Cgs=7n Cjo=1n Is=168p Rb=6.0m mfg=International_Rectifier Vds=-12 Ron=12m Qg=84n)
+.model IRF7822   VDMOS(Rg=3 Rd=2.0m Rs=1.5m Vto=2 Kp=100 Cgdmax=1.8n Cgdmin=0.22n Cgs=2.9n Cjo=0.88n Is=88p Rb=2.5m mfg=International_Rectifier Vds=30 Ron=5m  Qg=44n)
+.model IRF7811AV VDMOS(Rg=3 Rd=4.4m Rs=3.3m Vto=2 Kp=88  Cgdmax=0.7n Cgdmin=0.09n Cgs=1.1n Cjo=0.34n Is=34p Rb=5.5m mfg=International_Rectifier Vds=30 Ron=11m Qg=17n)
+.model FDS6576  VDMOS(pchan Rg=3 Rd=5.6m Rs=4.2m Vto=-1 Kp=82 Cgdmax=1.8n Cgdmin=0.22n Cgs=2.9n Cjo=0.88n Is=88p Rb=7.0m mfg=Fairchild Vds=-20 Ron=14m Qg=44n)
+.model FDS6875  VDMOS(pchan Rg=3 Rd=12.0m Rs=9.0m Vto=-1 Kp=50 Cgdmax=0.9n Cgdmin=0.12n Cgs=1.5n Cjo=0.46n Is=46p Rb=15.0m mfg=Fairchild Vds=-20 Ron=30m Qg=23n)
+.model FDS9933A VDMOS(pchan Rg=3 Rd=30.0m Rs=22.5m Vto=-1 Kp=12 Cgdmax=0.3n Cgdmin=0.04n Cgs=0.5n Cjo=0.16n Is=16p Rb=37.5m mfg=Fairchild Vds=-20 Ron=75m Qg=8n)
+.model FDS6675  VDMOS(pchan Rg=3 Rd=8.0m Rs=6.0m Vto=-1 Kp=70 Cgdmax=1.2n Cgdmin=0.15n Cgs=2.0n Cjo=0.60n Is=60p Rb=10.0m mfg=Fairchild Vds=-30 Ron=20m Qg=30n)
+.model FDS4435A VDMOS(pchan Rg=3 Rd=10.0m Rs=7.5m Vto=-1 Kp=60 Cgdmax=0.8n Cgdmin=0.11n Cgs=1.4n Cjo=0.42n Is=42p Rb=12.5m mfg=Fairchild Vds=-30 Ron=25m Qg=21n)
+.model FDS6685  VDMOS(pchan Rg=3 Rd=14.0m Rs=10.5m Vto=-1 Kp=40 Cgdmax=0.8n Cgdmin=0.10n Cgs=1.3n Cjo=0.38n Is=38p Rb=17.5m mfg=Fairchild Vds=-30 Ron=35m Qg=19n)
+.model FDS6975  VDMOS(pchan Rg=3 Rd=18.0m Rs=13.5m Vto=-1 Kp=20 Cgdmax=0.6n Cgdmin=0.08n Cgs=1.0n Cjo=0.30n Is=30p Rb=22.5m mfg=Fairchild Vds=-30 Ron=45m Qg=15n)
+.model FDS4953   VDMOS(pchan Rg=3 Rd=38.0m Rs=28.5m Vto=-1 Kp=9 Cgdmax=0.3n Cgdmin=0.04n Cgs=0.5n Cjo=0.16n Is=16p Rb=47.5m mfg=Fairchild Vds=-30 Ron=95m Qg=8n)
+.model Si4465DY VDMOS(pchan Rg=3 Rd=3.6m Rs=2.7m Vto=-1 Kp=92 Cgdmax=3.2n Cgdmin=0.40n Cgs=5.3n Cjo=1.60n Is=160p Rb=4.5m mfg=Siliconix Vds=-8 Ron=9m Qg=80n)
+.model Si4463DY VDMOS(pchan Rg=3 Rd=5.6m Rs=4.2m Vto=-1 Kp=82 Cgdmax=1.9n Cgdmin=0.24n Cgs=3.2n Cjo=0.96n Is=96p Rb=7.0m mfg=Siliconix Vds=-20 Ron=14m Qg=48n)
+.model Si4403DY VDMOS(pchan Rg=3 Rd=6.8m Rs=5.1m Vto=-1 Kp=76 Cgdmax=1.2n Cgdmin=0.15n Cgs=2.0n Cjo=0.61n Is=61p Rb=8.5m mfg=Siliconix Vds=-20 Ron=17m Qg=30.5n)
+.model Si9424DY VDMOS(pchan Rg=3 Rd=10.0m Rs=7.5m Vto=-1 Kp=60 Cgdmax=1.8n Cgdmin=0.23n Cgs=3.1n Cjo=0.92n Is=92p Rb=12.5m mfg=Siliconix Vds=-20 Ron=25m Qg=46n)
+.model Si9434DY VDMOS(pchan Rg=3 Rd=16.0m Rs=12.0m Vto=-1 Kp=30 Cgdmax=1.2n Cgdmin=0.15n Cgs=2.0n Cjo=0.60n Is=60p Rb=20.0m mfg=Siliconix Vds=-20 Ron=40m Qg=30n)
+.model Si9433DY VDMOS(pchan Rg=3 Rd=18.0m Rs=13.5m Vto=-1 Kp=20 Cgdmax=0.8n Cgdmin=0.10n Cgs=1.3n Cjo=0.40n Is=40p Rb=22.5m mfg=Siliconix Vds=-20 Ron=45m Qg=20n)
+.model Si4433DY VDMOS(pchan Rg=3 Vto=-1.2 Rd=44.0m Rs=33.0m Rb=55m Kp=30.0 Cgdmax=0.2n Cgdmin=0.07n Cgs=0.6n Cjo=0.2n Is=9p mfg=Siliconix Vds=-20 Ron=110m Qg=4.4n)
+.model Si9400DY VDMOS(pchan Rg=3 Rd=160.0m Rs=120.0m Vto=-1 Kp=5 Cgdmax=0.2n Cgdmin=0.03n Cgs=0.4n Cjo=0.11n Is=10.8p Rb=200.0m mfg=Siliconix Vds=-20 Ron=400m Qg=5.4n)
+.model Si4427DY VDMOS(pchan Rg=3 Rd=4.8m Rs=3.6m Vto=-1 Kp=86 Cgdmax=1.9n Cgdmin=0.24n Cgs=3.1n Cjo=0.94n Is=94p Rb=6.0m mfg=Siliconix Vds=-30 Ron=12m Qg=47n)
+.model Si4825DY VDMOS(pchan Rg=3 Rd=8.8m Rs=6.6m Vto=-1 Kp=66 Cgdmax=2.2n Cgdmin=0.28n Cgs=3.7n Cjo=1.10n Is=110p Rb=11.0m mfg=Siliconix Vds=-30 Ron=22m Qg=55n)
+.model Si4425DY VDMOS(pchan Rg=3 Rd=9.2m Rs=6.9m Vto=-1 Kp=64 Cgdmax=3.0n Cgdmin=0.37n Cgs=4.9n Cjo=1.48n Is=148p Rb=11.5m mfg=Siliconix Vds=-30 Ron=23m Qg=74n)
+.model Si4835DY VDMOS(pchan Rg=3 Rd=13.2m Rs=9.9m Vto=-1 Kp=44 Cgdmax=0.8n Cgdmin=0.11n Cgs=1.4n Cjo=0.42n Is=42p Rb=16.5m mfg=Siliconix Vds=-30 Ron=33m Qg=21n)
+.model Si4431DY VDMOS(pchan Rg=3 Rd=28.0m Rs=21.0m Vto=-1 Kp=10 Cgdmax=0.9n Cgdmin=0.11n Cgs=1.5n Cjo=0.44n Is=44p Rb=35.0m mfg=Siliconix Vds=-30 Ron=70m Qg=22n)
+.model Si9435DY VDMOS(pchan Rg=3 Rd=28.0m Rs=21.0m Vto=-1 Kp=10 Cgdmax=1.1n Cgdmin=0.14n Cgs=1.8n Cjo=0.54n Is=54p Rb=35.0m mfg=Siliconix Vds=-30 Ron=70m Qg=27n)
+.model Si4401DY VDMOS(pchan Rg=3 Rd=8.8m Rs=6.6m Vto=-1 Kp=66 Cgdmax=1.5n Cgdmin=0.19n Cgs=2.5n Cjo=0.74n Is=74p Rb=11.0m mfg=Siliconix Vds=-40 Ron=22m Qg=37n)
+.model IRF7343N VDMOS(Rg=3 Rd=20m Rs=15m Vto=1 Kp=10 Cgdmax=1.4n Cgdmin=0.18n Cgs=0.8n Cjo=0.72n Is=72p Rb=25m mfg=International_Rectifier  Vds=55 Ron=50m Qg=36n)
+.model IRF7343P VDMOS(pchan Rg=3 Rd=42m Rs=31m Vto=-1 Kp=1 Cgdmax=1.5n Cgdmin=0.19n Cgs=0.83n Cjo=0.76n Is=76p Rb=52m mfg=International_Rectifier Vds=-55 Ron=105m Qg=38n)
+.model Si4940DY VDMOS(Rg=3 Rd=20.0m Rs=15.0m Vto=2.7 Kp=15  Lambda=0.02  Cgdmax=0.4n Cgdmin=0.05n Cgs=0.6n Cjo=0.18n Is=18p Rb=25.0m mfg=Siliconix Vds=40 Ron=50m Qg=9n)
+.model Si7868DP VDMOS(Rg=3 Rd=1.2m Rs=0.9m Vto=1.2 Kp=50 Cgdmax=2.0n Cgdmin=0.25n Cgs=3.3n Cjo=1n Is=100p Rb=1.5m mfg=Siliconix Vds=20 Ron=3m Qg=50n)
+.model Si7866DP VDMOS(Rg=3 Rd=1.6m Rs=1.2m Vto=1.2 Kp=50 Cgdmax=1.6n Cgdmin=0.2n Cgs=2.7n Cjo=0.8n Is=80p Rb=2m mfg=Siliconix Vds=20 Ron=4m Qg=40n)
+.model uPA1706 VDMOS(Rg=3 Rd=2.8m Rs=2.1m Vto=2 Kp=96 Cgdmax=2.2n Cgdmin=0.28n Cgs=3.7n Cjo=1.12n Is=112p Rb=3.5m mfg=NEC Vds=30 Ron=7m Qg=56n)
+.model uPA1707 VDMOS(Rg=3 Rd=5m Rs=3.8m Vto=2 Kp=85 Cgdmax=1.0n Cgdmin=0.13n Cgs=1.7n Cjo=0.52n Is=52p Rb=6.3m mfg=NEC Vds=30 Ron=12.5m Qg=26n)
+.model IRF7468  VDMOS(Rg=3 Rd=6.4m Rs=4.8m Vto=1.8  Kp=40  Cgdmax=0.9n Cgdmin=0.12n Cgs=1.5n Cjo=0.46n Is=46p Rb=8m mfg=International_Rectifier Vds=40 Ron=16m Qg=23n)
+.model BSS123  VDMOS(Rg=3 Rd=2.4 Rs=1.8 Vto=1.6 Kp=1 Cgdmax=0.1n Cgdmin=0.01n Cgs=0.1n Cjo=0.03n Is=2.8p Rb=3.0 mfg=Fairchild Vds=100 Ron=6 Qg=1.4n)
+.model FQB11P06 VDMOS(pchan Rg=3 Rd=70m Rs=52m Vto=-4 lambda=0.3  Kp=6 Cgdmax=0.5n Cgdmin=0.07n Cgs=0.9n Cjo=0.26n Is=26p Rb=87m mfg=Fair  Vds=-60 Ron=175m Qg=13n)
+.model IRF1312S VDMOS(Rg=3 Rd=4m Rs=3m Vto=5.25 Kp=70 Cgdmax=3.7n Cgdmin=0.47n Cgs=6.2n Cjo=1.86n Is=186p Rb=5m mfg=International_Rectifier Vds=80 Ron=10m Qg=93n)
+.model AO6408 VDMOS(Rg=3 Rd=4.8m Rs=3.6m Vto=1.0 Kp=90 Cgdmax=0.7n Cgdmin=0.25n Cgs=1n Cjo=0.36n Is=36p Rb=6m mfg=Alpha_&_Omega  Vds=20 Ron=12m Qg=18n)
+.model AO6407 VDMOS(pchan Rg=3 Rd=14m Rs=10m Vto=-0.8  Kp=32 Cgdmax=0.5n Cgdmin=0.07n Cgs=0.9n Cjo=0.26n Is=26p Rb=17m mfg=AO  Vds=-20 Ron=34m Qg=13n)
+.model FDC637AN VDMOS(Rg=3 Rd=9.6m Rs=7.2m Vto=1.1   Kp=62 Cgdmax=1.2n Cgdmin=0.05n Cgs=1.3n Cjo=0.21n Is=21p Rb=12m mfg=Fairchild Vds=20 Ron=24m Qg=10.5n)
+.model Si3460DV VDMOS(Rg=3 Rd=12m Rs=9m Vto=1  Kp=100 Cgdmax=0.5n Cgdmin=0.07n Cgs=2n Cjo=0.27n Is=27p Rb=15m mfg=Siliconix Vds=20 Ron=30m Qg=13.5n)
+.model FDS6574A VDMOS(Rg=3 Rd=3m Rs=2.3m Vto=0.65 Kp=95 Cgdmax=10n Cgdmin=0.38n Cgs=5n Cjo=1.5n Is=150p Rb=3.8m mfg=Fairchild Vds=20 Ron=7.5m Qg=75n)
+.model HAT2164H VDMOS(Rg=0.50 Rd=1m   Rs=0.8m Vto=2  lambda=0.05 Kp=105 Cgdmax=2n   Cgdmin=0.6n  Cgs=3.3n Cjo=1n   Is=100p Rb=1.3m mfg=Renesas  Vds=30Ron=2.5m Qg=50n)
+.model HAT2165H VDMOS(Rg=0.50 Rd=1m   Rs=0.8m Vto=2  lambda=0.05 Kp=105 Cgdmax=1.3n Cgdmin=0.33n Cgs=2.2n Cjo=.66n Is=66p Rb=1.3m mfg=Renesas Vds=30 Ron=2.5m Qg=33n)
+.model HAT2166H VDMOS(Rg=0.50 Rd=1.2m Rs=0.9m Vto=2  lambda=0.08 Kp=114 Cgdmax=1.1n Cgdmin=0.27n Cgs=1.8n Cjo=.54n Is=54p Rb=1.5m mfg=Renesas Vds=30 Ron=2.9m Qg=27n)
+.model HAT2167H VDMOS(Rg=0.50 Rd=1.7m Rs=1.3m Vto=2  lambda=0.05 Kp=102 Cgdmax=.7n  Cgdmin=0.17n Cgs=1.1n Cjo=.34n Is=34p Rb=2.1m mfg=Renesas Vds=30 Ron=4.2m Qg=17n)
+.model HAT2168H VDMOS(Rg=0.55 Rd=2.4m Rs=1.8m Vto=2  lambda=0.05 Kp=60  Cgdmax=0.4n Cgdmin=0.2n  Cgs=.7n  Cjo=.22n Is=20p Rb=3m mfg=Renesas Vds=30 Ron=6m Qg=11n)
+.model HAT1072H VDMOS(pchan Rg=3 Rd=1.4m Rs=1.1m Vto=-2  Kp=103 lambda=0.03 Cgdmax=4.2n Cgdmin=0.5n Cgs=4.3n Cjo=3n Is=310p Rb=1.8m mfg=Renesas Vds=-30 Ron=3.6m Qg=155n)
+.model IRF6607 VDMOS(Rg=3 Rd=1.5m Rs=1.1m Vto=2 lambda=0.15 Kp=50 Cgdmax=2.0n Cgdmin=0.5n Cgs=5.3n Cjo=1n Is=100p Rb=1.9m mfg=International_Rectifier Vds=30 Ron=3.8m Qg=50n)
+.model IRF6618 VDMOS(Rg=3 Rd=1.1m Rs=0.8m Vto=2.2 lambda=0.05 Kp=50 Cgdmax=1.8n Cgdmin=0.16n Cgs=4.5n Cjo=0.92n Is=92p Rb=1.4m mfg=International_Rectifier Vds=30 Ron=2.8m Qg=46n)
+.model Si4920DY VDMOS(Rg=3 Vto=2.8 Rd=12.0m Rs=9.0m Rb=15m Kp=50.0 Cgdmax=1.2n Cgdmin=0.10n Cgs=2.0n Cjo=0.60n Is=60p mfg=Siliconix Vds=30 Ron=30m Qg=30n)
+.model BSS145 VDMOS(Rg=3 Vto=2.8  Rd=1.4 Rs=1  Rb=1.75 Kp=0.15  Cgdmax=0.08n Cgdmin=0.001n Cgs=0.01n Cjo=0.004n Is=0.5p mfg=Infineon Vds=100 Ron=3500m Qg=2n)
+.model BSS84 VDMOS(pchan Rg=3 Vto=-2.1  Rd=2.4  Rs=1.8  Rb=3  Kp=0.2  Cgdmax=0.04n Cgdmin=0.001n Cgs=0.02n Cjo=0.01n Is=2p mfg=Philips Vds=-50 Ron=6000m Qg=1n)
+.model SI4467DY VDMOS(pchan Rg=3 Vto=-0.7  Rd=4.0m Rs=3.0m Rb=5m Kp=90.0 Cgdmax=3.4n Cgdmin=1.5n Cgs=10n Cjo=3.72n Is=172p mfg=Fairchild Vds=-20 Ron=10m Qg=86n)
+.model IRLML2803 VDMOS(Rg=3 Vto=2.9  Rd=0.1 Rs=75.0m Rb=125m Kp=10.0 Cgdmax=0.15n Cgdmin=0.018n Cgs=0.13n Cjo=0.07n Is=7p mfg=International_Rectifier Vds=30 Ron=250m Qg=3.3n)
+.model IRL3915 VDMOS(Rg=3 Vto=1.9  Rd=5.6m Rs=4.2m Rb=7m Kp=60 lambda=0.02 Cgdmax=2.4n Cgdmin=0.4n Cgs=4.1n Cjo=1.22n Is=122p mfg=International_Rectifier Vds=55 Ron=14m Qg=61n)
+.model FDS4072N3 VDMOS(Rg=3 Vto=1.3  Rd=4.0m Rs=3.0m Rb=5m Kp=90.0 Cgdmax=1.3n Cgdmin=0.3n Cgs=5.2n Cjo=0.66n Is=66p mfg=Fairchild Vds=40 Ron=10m Qg=33n)
+.model Si7409DN VDMOS(pchan Rg=3 Vto=-0.8 Rd=7.6m Rs=5.7m Rb=10m Kp=72.0 Cgdmax=1.0n Cgdmin=0.25n Cgs=1.7n Cjo=0.50n Is=50p mfg=International_Rectifier Vds=-30 Ron=19m Qg=25n)
+.model Si7540DP_P VDMOS(pchan Rg=3 Vto=-1.3 Rd=16.0m Rs=12.0m Rb=20m Kp=30.0 Cgdmax=0.6n Cgdmin=0.14n Cgs=0.9n Cjo=0.28n Is=28p mfg=International_Rectifier Vds=-12 Ron=40m Qg=14n)
+.model Si7540DP_N VDMOS(Rg=3 Vto=1.4 Rd=8.0m Rs=6.0m Rb=10m Kp=70.0 Cgdmax=0.5n Cgdmin=0.12n Cgs=0.8n Cjo=0.24n Is=24p mfg=International_Rectifier Vds=12 Ron=20m Qg=12n)
+.model SUD40N04-10A VDMOS(Rg=3 Vto=2.9 Rd=4.0m Rs=3.0m Rb=5m Kp=90.0 Cgdmax=1.4n Cgdmin=0.20n Cgs=1.8n Cjo=0.70n Is=70p mfg=Siliconix Vds=40 Ron=10m Qg=35n)
+.model IRF7831 VDMOS(Rg=3 Vto=2.35 Rd=1.4m Rs=1.1m Rb=2m Kp=102.8 Cgdmax=1.6n Cgdmin=0.40n Cgs=2.7n Cjo=0.80n Is=80p mfg=International_Rectifier Vds=30 Ron=3.6m Qg=40n)
+.model NTLMS4502N VDMOS(Rg=3 Vto=1.5 Rd=3.2m Rs=2.4m Rb=4m Kp=94.0 Cgdmax=0.1n Cgdmin=0.03n Cgs=0.2n Cjo=0.06n Is=6p mfg=Onsemi Vds=24 Ron=8m Qg=3n)
+.model NTLMS4504N VDMOS(Rg=3 Vto=1.5 Rd=1.5m Rs=1.1m Rb=2m Kp=102.6 Cgdmax=1.0n Cgdmin=0.24n Cgs=1.6n Cjo=0.48n Is=48p mfg=Onsemi Vds=24 Ron=3.7m Qg=24n)
+.model PH2625L VDMOS(Rg=3 Vto=1.5 Rd=1.1m Rs=0.8m Rb=1m Kp=104.6 Cgdmax=1.3n Cgdmin=0.32n Cgs=2.1n Cjo=0.64n Is=64p mfg=Philips Vds=25 Ron=2.7m Qg=32n)
+.model PH6325L VDMOS(Rg=3 Vto=1.5  Rd=2.5m Rs=1.9m Rb=3m Kp=97.4 Cgdmax=0.5n Cgdmin=0.13n Cgs=0.9n Cjo=0.26n Is=26p mfg=Philips Vds=25 Ron=6.3m Qg=13n)
+.model HAT2044R VDMOS(Rg=3 Vto=1 Rd=2.8m Rs=2.1m Rb=4m Kp=120 Cgdmax=1.9n Cgdmin=0.48n Cgs=3n Cjo=0.96n Is=96p mfg=Renesas Vds=30 Ron=7m Qg=48n)
+.model HAT1023R VDMOS(pchan Rg=3 Vto=-1.4 Rd=12.0m Rs=9.0m Rb=15m Kp=50.0 Cgdmax=1.2n Cgdmin=0.30n Cgs=2.0n Cjo=0.60n Is=60p mfg=Renesas Vds=-20 Ron=30m Qg=30n)
+.model IRF7335 VDMOS(Rg=3 Vto=1.9 Rd=5.2m Rs=3.9m Rb=7m Kp=84.0 Cgdmax=0.7n Cgdmin=0.2n Cgs=1.5n Cjo=0.26n Is=26p mfg=International_Rectifier Vds=30 Ron=13m Qg=13n)
+.model IRF6609 VDMOS(Rg=3 Vto=2.6 Rd=0.8m Rs=0.6m Rb=1m Kp=106.0 Cgdmax=1.8n Cgdmin=0.86n Cgs=5.1n Cjo=0.92n Is=92p mfg=International_Rectifier Vds=20 Ron=2m Qg=46n)
+.model IRF6620 VDMOS(Rg=3 Vto=2.5 Rd=1.1m Rs=0.8m Rb=1m Kp=104.6 Cgdmax=1.5n Cgdmin=0.6n Cgs=3n Cjo=0.56n Is=56p mfg=International_Rectifier Vds=20 Ron=2.7m Qg=28n)
+.model IRF6623 VDMOS(Rg=3 Vto=2.35 Rd=2.3m Rs=1.7m Rb=3m Kp=98.6 Cgdmax=0.5n Cgdmin=0.2n Cgs=1.4n Cjo=0.22n Is=22p mfg=International_Rectifier Vds=20 Ron=5.7m Qg=11n)
+.model IRF6691 VDMOS(Rg=3 Vto=2.5 Rd=0.7m Rs=0.5m Rb=1m Kp=106.4 Cgdmax=1.9n Cgdmin=0.7n Cgs=6.1n Cjo=0.94n Is=94p mfg=International_Rectifier Vds=20 Ron=1.8m Qg=47n)
+.model FDZ5047N VDMOS(Rg=3 Vto=1.5 Rd=1.8m Rs=1.4m Rb=2m Kp=100 Cgdmax=5n Cgdmin=0.5n Cgs=3.5n Cjo=1.04n Is=104p mfg=Fairchild Vds=30 Ron=4.5m Qg=52n)
+.model FDZ7064N VDMOS(Rg=3 Vto=1.4 Rd=3.2m Rs=2.4m Rb=4m Kp=90 Cgdmax=3.5n Cgdmin=0.2n Cgs=2.5n Cjo=0.62n Is=62p mfg=Fairchild Vds=30 Ron=8m Qg=31n)
+.model Si7852DP VDMOS(Rg=4 Vto=4.1 Rd=6.4m Rs=4.8m Rb=8m Kp=78.0 Cgdmax=1.4n Cgdmin=0.1n Cgs=1.5n Cjo=0.68n Is=68p mfg=Siliconix Vds=80 Ron=16m Qg=34n)
+.model Si4490DY VDMOS(Rg=3 Vto=4   Rd=32.0m Rs=24.0m Rb=40m Kp=30.0 Cgdmax=1n Cgdmin=0.08n Cgs=1.7n Cjo=0.45n Is=68p mfg=Siliconix Vds=200 Ron=80m Qg=34n)
+.model Si4408DY VDMOS(Rg=3 Vto=2.1 Rd=1.8m Rs=1.4m Rb=2m Kp=50 Cgdmax=1.2n Cgdmin=0.5n Cgs=2.5n Cjo=0.6n Is=42p mfg=Siliconix Vds=20 Ron=4.5m Qg=21n)
+.model IXFX90N30 VDMOS(Rg=3 Vto=3.6 Rd=13.2m Rs=9.9m Rb=17m Kp=90 Cgdmax=30n Cgdmin=10n Cgs=100n Cjo=30n Is=720p mfg=IXYS Vds=300 Ron=33m Qg=360n)
+.model IRF1302 VDMOS(Rg=3 Vto=4   Rd=1.6m Rs=1.2m Rb=2m Kp=50 Cgdmax=5n Cgdmin=1n Cgs=2n Cjo=1n Is=160p mfg=International_Rectifier Vds=20 Ron=4m Qg=80n)
+.model FDR4420A VDMOS(Rg=3 Vto=2.2 Rd=3.6m Rs=2.7m Rb=5m Kp=92.0 Cgdmax=1.6n Cgdmin=0.6n Cgs=2.2n Cjo=0.46n Is=46p mfg=Fairchild Vds=30 Ron=9m Qg=23n)
+.model FDR6580 VDMOS(Rg=3 Vto=1   Rd=3.6m Rs=2.7m Rb=5m Kp=120 Cgdmax=2.8n Cgdmin=0.6n Cgs=2.7n Cjo=0.68n Is=68p mfg=Fairchild Vds=20 Ron=9m Qg=34n)
+
+* ----------------------------------------------------------------------
+************************* SIMULATION PARAMETERS ************************
+* ----------------------------------------------------------------------
+* format    : ELDO
+* model     : MOS LEVEL_2
+* process   : BAE
+* extracted : BAE L364PT10; 1994-04
+* doc#      : 9933002 REV_A;
+* created   : 08.11.94; ban (481)
+* ----------------------------------------------------------------------
+*                        TYPICAL MEAN CONDITION
+* ----------------------------------------------------------------------
+.MODEL MN NMOS LEVEL=2
++ CGSO =0.330e-09   CGDO =0.330e-09   CGBO =0.150e-09
++ CJ   =0.360e-03   MJ   =0.430e+00   CJSW =0.250e-09   MJSW =0.190e+00
++ JS   =0.010e-03   PB   =0.960e+00   RSH  =23.00e+00
++ TOX  =21.60e-09   XJ   =0.373e-06   LD   =-.077e-06   WD   =0.439e-06
++ VTO  =0.754e+00   NSUB =31.10e+15   NFS  =0.335e+12   NEFF =5.080e+00
++ UO   =390.0e+00   UCRIT=34.80e+04   UEXP =0.315e+00   UTRA =0.000e+00
++ VMAX =94.30e+03   DELTA=0.000e+00   KF   =0.139e-25   AF   =1.520e+00
+.MODEL MP PMOS LEVEL=2
++ CGSO =0.330e-09   CGDO =0.330e-09   CGBO =0.150e-09
++ CJ   =0.340e-03   MJ   =0.530e+00   CJSW =0.220e-09   MJSW =0.200e+00
++ JS   =0.020e-03   PB   =0.970e+00   RSH  =50.00e+00
++ TOX  =21.60e-09   XJ   =0.020e-06   LD   =-.030e-06   WD   =0.442e-06
++ VTO  =-.763e+00   NSUB =28.50e+15   NFS  =0.332e+12   NEFF =2.260e+00
++ UO   =117.8e+00   UCRIT=30.80e+04   UEXP =0.270e+00   UTRA =0.000e+00
++ VMAX =53.10e+03   DELTA=0.000e+00   KF   =0.104e-26   AF   =1.480e+00
+* ----------------------------------------------------------------------
+
+.MODEL MODN NMOS LEVEL=7 
+
+* ----------------------------------------------------------------------
+
+************************* SIMULATION PARAMETERS ************************
+
+* ----------------------------------------------------------------------
+
+* format    : PSPICE
+
+* model     : MOS BSIM3v3
+
+* process   : C35
+
+* revision  : 2; 
+
+* extracted : B10866 ; 2002-12; ese(487)
+
+* doc#      : ENG-182 REV_2
+
+* ----------------------------------------------------------------------
+
+*                        TYPICAL MEAN CONDITION
+
+* ----------------------------------------------------------------------
+
+*
+
+*        *** Flags ***
+
++MOBMOD =1.000e+00 CAPMOD =2.000e+00 
+
++NOIMOD =3.000e+00 
+
+*        *** Threshold voltage related model parameters ***
+
++K1     =5.0296e-01 
+
++K2     =3.3985e-02 K3     =-1.136e+00 K3B    =-4.399e-01 
+
++NCH    =2.611e+17 VTH0   =4.979e-01 
+
++VOFF   =-8.925e-02 DVT0   =5.000e+01 DVT1   =1.039e+00 
+
++DVT2   =-8.375e-03 KETA   =2.032e-02 
+
++PSCBE1 =3.518e+08 PSCBE2 =7.491e-05 
+
++DVT0W  =1.089e-01 DVT1W  =6.671e+04 DVT2W  =-1.352e-02 
+
+*        *** Mobility related model parameters ***
+
++UA     =4.705e-12 UB     =2.137e-18 UC     =1.000e-20 
+
++U0     =4.758e+02 
+
+*        *** Subthreshold related parameters ***
+
++DSUB   =5.000e-01 ETA0   =1.415e-02 ETAB   =-1.221e-01 
+
++NFACTOR=4.136e-01 
+
+*        *** Saturation related parameters ***
+
++EM     =4.100e+07 PCLM   =6.948e-01 
+
++PDIBLC1=3.571e-01 PDIBLC2=2.065e-03 DROUT  =5.000e-01 
+
++A0     =2.541e+00 A1     =0.000e+00 A2     =1.000e+00 
+
++PVAG   =0.000e+00 VSAT   =1.338e+05 AGS    =2.408e-01 
+
++B0     =4.301e-09 B1     =0.000e+00 DELTA  =1.442e-02 
+
++PDIBLCB=3.222e-01 
+
+*        *** Geometry modulation related parameters ***
+
++W0     =2.673e-07 DLC    =3.0000e-08 
+
++DWB    =0.000e+00 DWG    =0.000e+00 
+
++LL     =0.000e+00 LW     =0.000e+00 LWL    =0.000e+00 
+
++LLN    =1.000e+00 LWN    =1.000e+00 WL     =0.000e+00 
+
++WW     =-1.297e-14 WWL    =-9.411e-21 WLN    =1.000e+00 
+
++WWN    =1.000e+00 
+
+*        *** Temperature effect parameters ***
+
++AT     =3.300e+04 UTE    =-1.800e+00 
+
++KT1    =-3.302e-01 KT2    =2.200e-02 KT1L   =0.000e+00 
+
++UA1    =0.000e+00 UB1    =0.000e+00 UC1    =0.000e+00 
+
++PRT    =0.000e+00 
+
+*        *** Overlap capacitance related and dynamic model parameters   ***
+
++CGDO   =1.300e-10 CGSO   =1.200e-10 CGBO   =1.100e-10 
+
++CGDL   =1.310e-10 CGSL   =1.310e-10 CKAPPA =6.000e-01 
+
++CF     =0.000e+00 ELM    =5.000e+00 
+
++XPART  =1.000e+00 CLC    =1.000e-15 CLE    =6.000e-01 
+
+*        *** Parasitic resistance and capacitance related model parameters ***
+
++RDSW   =3.449e+02 
+
++CDSC   =0.000e+00 CDSCB  =1.500e-03 CDSCD  =1.000e-03 
+
++PRWB   =-2.416e-01 PRWG   =0.000e+00 CIT    =4.441e-04 
+
+*        *** Process and parameters extraction related model parameters ***
+
++TOX    =7.575e-09 NGATE  =0.000e+00 
+
++NLX    =1.888e-07 
+
+*        *** Substrate current related model parameters ***
+
++ALPHA0 =0.000e+00 BETA0  =3.000e+01 
+
+*        *** Noise effect related model parameters ***
+
++AF     =1.3600e+00 KF     =5.1e-27 EF     =1.000e+00 
+
++NOIA   =1.73e+19 NOIB   =7.000e+04 NOIC   =-5.64e-13 
+
+*        *** Common extrinsic model parameters ***
+
++LINT   =-5.005e-08 WINT   =9.4030e-08 XJ     =3.000e-07 
+
++RSH    =7.000e+01 JS     =1.000e-05 
+
++CJ     =9.400e-04 CJSW   =2.500e-10 
+
+*** +CBD    =0.000e+00 CBS    =0.000e+00 IS     =0.000e+00 
+
++MJ     =3.400e-01 N      =1.000e+00 MJSW   =2.300e-01 
+
++PB     =6.900e-01 TT     =0.000e+00 
+
++PBSW   =6.900e-01 
+
+* ----------------------------------------------------------------------
+
+.SUBCKT ND A C PARAMS: AREA=1e-12 PERI=4e-6
+
+* ----------------------------------------------------------------------
+
+************************* SIMULATION PARAMETERS ************************
+
+* ----------------------------------------------------------------------
+
+* format    : PSPICE
+
+* model     : DIODE
+
+* process   : C35
+
+* revision  : 2; 
+
+* extracted : B10866 ; 2002-12; ese(487)
+
+* doc#      : ENG-182 REV_2
+
+* ----------------------------------------------------------------------
+
+*                        TYPICAL MEAN CONDITION
+
+* ----------------------------------------------------------------------
+
+* TERMINALS: A=anode=P-region C=cathode=N-region
+
+* VARIABLES: M (mulitiplier), AREA [m^2], PERI [m].
+
+* NOTE: The role of a protection DIODE is to conduct ESD current to VDD 
+
+* (or from VSS). This forward bias is NOT modelled, only leakage current 
+
+* and capacitance during normal operation. Any inductive load etc that 
+
+* will give forward bias, must be limited by other components to within 
+
+* Operating Conditions, otherwise parasitic bipolar action can occur.
+
+*
+
+D1 A C NDINSUBA {AREA}
+
+D2 A C NDINSUBS {PERI}
+
+.ENDS ND
+
+*
+
+.MODEL NDINSUBA D 
+
++IS     =1.000e-05 N      =1.000e+00 
+
++CJO    =9.400e-04 M      =3.400e-01 VJ     =6.900e-01 
+
++TT     =0.000e+00 FC     =0.500e+00 
+
++EG     =1.110e+00 XTI    =3.000e+00 
+
++AF     =1.000e+00 KF     =0.000e+00
+
+.MODEL NDINSUBS D
+
++IS     =0.000e+00 N      =1.000e+00 
+
++CJO    =2.500e-10 M      =2.300e-01 VJ     =6.900e-01 
+
++TT     =0.000e+00 FC     =0.500e+00  
+
++EG     =1.110e+00 XTI    =3.000e+00 
+
++AF     =1.000e+00 KF     =0.000e+00
+
+* ----------------------------------------------------------------------
+
+.MODEL MODNM NMOS LEVEL=7 
+
+* ----------------------------------------------------------------------
+
+************************* SIMULATION PARAMETERS ************************
+
+* ----------------------------------------------------------------------
+
+* format    : PSPICE
+
+* model     : MOS BSIM3v3
+
+* process   : C35
+
+* revision  : 2; 
+
+* extracted : B11004 ; 2002-12; ese(487)
+
+* doc#      : ENG-182 REV_2
+
+* ----------------------------------------------------------------------
+
+*                        TYPICAL MEAN CONDITION
+
+* ----------------------------------------------------------------------
+
+*
+
+*        *** Flags ***
+
++MOBMOD =1.000e+00 CAPMOD =2.000e+00 
+
++NOIMOD =3.000e+00 
+
+*        *** Threshold voltage related model parameters ***
+
++K1     =7.4922e-01 
+
++K2     =1.1026e-01 K3     =-3.776e+00 K3B    =-7.691e-02 
+
++NCH    =2.265e+17 VTH0   =7.525e-01 
+
++VOFF   =-8.295e-02 DVT0   =3.000e+01 DVT1   =1.528e+00 
+
++DVT2   =2.529e-02 KETA   =3.585e-02 
+
++PSCBE1 =4.309e+08 PSCBE2 =1.000e-10 
+
++DVT0W  =-5.000e+00 DVT1W  =2.578e+06 DVT2W  =5.105e-02 
+
+*        *** Mobility related model parameters ***
+
++UA     =4.708e-10 UB     =1.470e-18 UC     =-4.342e-11 
+
++U0     =5.643e+02 
+
+*        *** Subthreshold related parameters ***
+
++DSUB   =5.000e-01 ETA0   =3.795e-02 ETAB   =-7.653e-04 
+
++NFACTOR=8.573e-01 
+
+*        *** Saturation related parameters ***
+
++EM     =4.100e+07 PCLM   =2.125e-01 
+
++PDIBLC1=1.000e-04 PDIBLC2=5.458e-04 DROUT  =5.000e-01 
+
++A0     =2.064e+00 A1     =0.000e+00 A2     =1.000e+00 
+
++PVAG   =0.000e+00 VSAT   =1.078e+05 AGS    =1.079e-01 
+
++B0     =-1.493e-07 B1     =0.000e+00 DELTA  =1.000e-02 
+
++PDIBLCB=5.186e-01 
+
+*        *** Geometry modulation related parameters ***
+
++W0     =1.617e-07 DLC    =1.0000e-07 
+
++DWB    =0.000e+00 DWG    =0.000e+00 
+
++LL     =0.000e+00 LW     =0.000e+00 LWL    =0.000e+00 
+
++LLN    =1.000e+00 LWN    =1.000e+00 WL     =0.000e+00 
+
++WW     =-5.117e-14 WWL    =-5.704e-21 WLN    =1.000e+00 
+
++WWN    =1.000e+00 
+
+*        *** Temperature effect parameters ***
+
++AT     =3.300e+04 UTE    =-1.760e+00 
+
++KT1    =-4.502e-01 KT2    =2.200e-02 KT1L   =0.000e+00 
+
++UA1    =0.000e+00 UB1    =0.000e+00 UC1    =0.000e+00 
+
++PRT    =0.000e+00 
+
+*        *** Overlap capacitance related and dynamic model parameters   ***
+
++CGDO   =1.080e-10 CGSO   =1.080e-10 CGBO   =1.100e-10 
+
++CGDL   =2.270e-10 CGSL   =2.270e-10 CKAPPA =6.000e-01 
+
++CF     =0.000e+00 ELM    =5.000e+00 
+
++XPART  =1.000e+00 CLC    =1.000e-15 CLE    =6.000e-01 
+
+*        *** Parasitic resistance and capacitance related model parameters ***
+
++RDSW   =1.390e+03 
+
++CDSC   =0.000e+00 CDSCB  =-1.500e-03 CDSCD  =0.000e+00 
+
++PRWB   =-6.740e-02 PRWG   =0.000e+00 CIT    =0.000e+00 
+
+*        *** Process and parameters extraction related model parameters ***
+
++TOX    =1.516e-08 NGATE  =0.000e+00 
+
++NLX    =2.283e-07 
+
+*        *** Substrate current related model parameters ***
+
++ALPHA0 =0.000e+00 BETA0  =3.000e+01 
+
+*        *** Noise effect related model parameters ***
+
++AF     =1.270e+00 KF     =3.50e-27 EF     =1.000e+00 
+
++NOIA   =6.64e+19 NOIB   =1.090e+05 NOIC   =-1.4e-13 
+
+*        *** Common extrinsic model parameters ***
+
++LINT   =1.2250e-07 WINT   =1.6230e-07 XJ     =3.000e-07 
+
++RSH    =7.900e+01 JS     =1.000e-05 
+
++CJ     =9.400e-04 CJSW   =2.500e-10 
+
+*+CBD    =0.000e+00 CBS    =0.000e+00 IS     =0.000e+00 
+
++MJ     =3.400e-01 N      =1.000e+00 MJSW   =2.300e-01 
+
++PB     =6.900e-01 TT     =0.000e+00 
+
++PBSW   =6.900e-01 
+
+* ----------------------------------------------------------------------
+
+.MODEL MODPM PMOS LEVEL=7 
+
+* ----------------------------------------------------------------------
+
+************************* SIMULATION PARAMETERS ************************
+
+* ----------------------------------------------------------------------
+
+* format    : PSPICE
+
+* model     : MOS BSIM3v3
+
+* process   : C35
+
+* revision  : 2; 
+
+* extracted : C64685 ; 2002-12; ese(487)
+
+* doc#      : ENG-182 REV_2
+
+* ----------------------------------------------------------------------
+
+*                        TYPICAL MEAN CONDITION
+
+* ----------------------------------------------------------------------
+
+*
+
+*        *** Flags ***
+
++MOBMOD =1.000e+00 CAPMOD =2.000e+00 
+
++NOIMOD =3.000e+00 
+
+*        *** Threshold voltage related model parameters ***
+
++K1     =5.4907e-01 
+
++K2     =4.6395e-02 K3     =8.317e+00 K3B    =-1.479e+00 
+
++NCH    =8.479e+16 VTH0   =-1.011e+00 
+
++VOFF   =-1.148e-01 DVT0   =5.399e-01 DVT1   =4.112e-01 
+
++DVT2   =-9.479e-02 KETA   =3.010e-02 
+
++PSCBE1 =5.000e+09 PSCBE2 =1.000e-10 
+
++DVT0W  =8.099e-01 DVT1W  =1.480e+05 DVT2W  =4.404e-02 
+
+*        *** Mobility related model parameters ***
+
++UA     =1.800e-12 UB     =2.218e-18 UC     =-7.278e-11 
+
++U0     =1.373e+02 
+
+*        *** Subthreshold related parameters ***
+
++DSUB   =5.000e-01 ETA0   =9.736e-02 ETAB   =-2.948e-02 
+
++NFACTOR=7.046e-01 
+
+*        *** Saturation related parameters ***
+
++EM     =4.100e+07 PCLM   =4.395e+00 
+
++PDIBLC1=2.037e-02 PDIBLC2=1.000e-20 DROUT  =5.000e-01 
+
++A0     =1.386e+00 A1     =0.000e+00 A2     =1.000e+00 
+
++PVAG   =0.000e+00 VSAT   =1.436e+05 AGS    =1.364e-01 
+
++B0     =1.991e-08 B1     =0.000e+00 DELTA  =1.000e-02 
+
++PDIBLCB=1.000e+00 
+
+*        *** Geometry modulation related parameters ***
+
++W0     =1.000e-10 DLC    =2.5000e-08 
+
++DWB    =0.000e+00 DWG    =0.000e+00 
+
++LL     =0.000e+00 LW     =0.000e+00 LWL    =0.000e+00 
+
++LLN    =1.000e+00 LWN    =1.000e+00 WL     =0.000e+00 
+
++WW     =-9.750e-16 WWL    =-1.787e-21 WLN    =1.000e+00 
+
++WWN    =1.040e+00 
+
+*        *** Temperature effect parameters ***
+
++AT     =3.300e+04 UTE    =-1.300e+00 
+
++KT1    =-6.003e-01 KT2    =2.200e-02 KT1L   =0.000e+00 
+
++UA1    =0.000e+00 UB1    =0.000e+00 UC1    =0.000e+00 
+
++PRT    =0.000e+00 
+
+*        *** Overlap capacitance related and dynamic model parameters   ***
+
++CGDO   =9.100e-11 CGSO   =9.100e-11 CGBO   =1.100e-10 
+
++CGDL   =0.600e-10 CGSL   =0.600e-10 CKAPPA =6.000e-01 
+
++CF     =0.000e+00 ELM    =5.000e+00 
+
++XPART  =1.000e+00 CLC    =1.000e-15 CLE    =6.000e-01 
+
+*        *** Parasitic resistance and capacitance related model parameters ***
+
++RDSW   =1.623e+03 
+
++CDSC   =1.214e-03 CDSCB  =2.945e-04 CDSCD  =0.000e+00 
+
++PRWB   =-4.521e-01 PRWG   =0.000e+00 CIT    =5.259e-05 
+
+*        *** Process and parameters extraction related model parameters ***
+
++TOX    =1.450e-08 NGATE  =0.000e+00 
+
++NLX    =2.231e-07 
+
+*        *** Substrate current related model parameters ***
+
++ALPHA0 =0.000e+00 BETA0  =3.000e+01 
+
+*        *** Noise effect related model parameters ***
+
++AF     =1.5e+00 KF     =9.4e-27 EF     =1.000e+00 
+
++NOIA   =1.09e+18 NOIB   =6.01e+03 NOIC   =1.19e-12 
+
+*        *** Common extrinsic model parameters ***
+
++LINT   =-8.504e-08 WINT   =6.2030e-08 XJ     =3.000e-07 
+
++RSH    =1.300e+02 JS     =9.000e-05 
+
++CJ     =1.360e-03 CJSW   =3.200e-10 
+
+*+CBD    =0.000e+00 CBS    =0.000e+00 IS     =0.000e+00 
+
++MJ     =5.600e-01 N      =1.000e+00 MJSW   =4.300e-01 
+
++PB     =1.020e+00 TT     =0.000e+00 
+
++PBSW   =1.020e+00 
+
+* ----------------------------------------------------------------------
+
+.MODEL MODP PMOS LEVEL=7 
+
+* ----------------------------------------------------------------------
+
+************************* SIMULATION PARAMETERS ************************
+
+* ----------------------------------------------------------------------
+
+* format    : PSPICE
+
+* model     : MOS BSIM3v3
+
+* process   : C35
+
+* revision  : 2; 
+
+* extracted : C64685 ; 2002-12; ese(487)
+
+* doc#      : ENG-182 REV_2
+
+* ----------------------------------------------------------------------
+
+*                        TYPICAL MEAN CONDITION
+
+* ----------------------------------------------------------------------
+
+*
+
+*        *** Flags ***
+
++MOBMOD =1.000e+00 CAPMOD =2.000e+00 
+
++NOIMOD =3.000e+00 
+
+*        *** Threshold voltage related model parameters ***
+
++K1     =5.9959e-01 
+
++K2     =-6.038e-02 K3     =1.103e+01 K3B    =-7.580e-01 
+
++NCH    =9.240e+16 VTH0   =-6.915e-01 
+
++VOFF   =-1.170e-01 DVT0   =1.650e+00 DVT1   =3.868e-01 
+
++DVT2   =1.659e-02 KETA   =-1.440e-02 
+
++PSCBE1 =5.000e+09 PSCBE2 =1.000e-04 
+
++DVT0W  =1.879e-01 DVT1W  =7.335e+04 DVT2W  =-6.312e-03 
+
+*        *** Mobility related model parameters ***
+
++UA     =5.394e-10 UB     =1.053e-18 UC     =1.000e-20 
+
++U0     =1.482e+02 
+
+*        *** Subthreshold related parameters ***
+
++DSUB   =5.000e-01 ETA0   =2.480e-01 ETAB   =-3.917e-03 
+
++NFACTOR=1.214e+00 
+
+*        *** Saturation related parameters ***
+
++EM     =4.100e+07 PCLM   =3.184e+00 
+
++PDIBLC1=1.000e-04 PDIBLC2=1.000e-20 DROUT  =5.000e-01 
+
++A0     =5.850e-01 A1     =0.000e+00 A2     =1.000e+00 
+
++PVAG   =0.000e+00 VSAT   =1.158e+05 AGS    =2.468e-01 
+
++B0     =8.832e-08 B1     =0.000e+00 DELTA  =1.000e-02 
+
++PDIBLCB=1.000e+00 
+
+*        *** Geometry modulation related parameters ***
+
++W0     =1.000e-10 DLC    =2.4500e-08 
+
++DWB    =0.000e+00 DWG    =0.000e+00 
+
++LL     =0.000e+00 LW     =0.000e+00 LWL    =0.000e+00 
+
++LLN    =1.000e+00 LWN    =1.000e+00 WL     =0.000e+00 
+
++WW     =1.894e-16 WWL    =-1.981e-21 WLN    =1.000e+00 
+
++WWN    =1.040e+00 
+
+*        *** Temperature effect parameters ***
+
++AT     =3.300e+04 UTE    =-1.300e+00 
+
++KT1    =-5.403e-01 KT2    =2.200e-02 KT1L   =0.000e+00 
+
++UA1    =0.000e+00 UB1    =0.000e+00 UC1    =0.000e+00 
+
++PRT    =0.000e+00 
+
+*        *** Overlap capacitance related and dynamic model parameters   ***
+
++CGDO   =8.600e-11 CGSO   =8.600e-11 CGBO   =1.100e-10 
+
++CGDL   =1.080e-10 CGSL   =1.080e-10 CKAPPA =6.000e-01 
+
++CF     =0.000e+00 ELM    =5.000e+00 
+
++XPART  =1.000e+00 CLC    =1.000e-15 CLE    =6.000e-01 
+
+*        *** Parasitic resistance and capacitance related model parameters ***
+
++RDSW   =1.033e+03 
+
++CDSC   =2.589e-03 CDSCB  =2.943e-04 CDSCD  =4.370e-04 
+
++PRWB   =-9.731e-02 PRWG   =1.477e-01 CIT    =0.000e+00 
+
+*        *** Process and parameters extraction related model parameters ***
+
++TOX    =7.754e-09 NGATE  =0.000e+00 
+
++NLX    =1.770e-07 
+
+*        *** Substrate current related model parameters ***
+
++ALPHA0 =0.000e+00 BETA0  =3.000e+01 
+
+*        *** Noise effect related model parameters ***
+
++AF     =1.48e+00 KF     =8.5e-27 EF     =1.000e+00 
+
++NOIA   =1.52e+18 NOIB   =7.75e+03 NOIC   =5.0e-13 
+
+*        *** Common extrinsic model parameters ***
+
++LINT   =-7.130e-08 WINT   =3.4490e-08 XJ     =3.000e-07 
+
++RSH    =1.290e+02 JS     =9.000e-05 
+
++CJ     =1.360e-03 CJSW   =3.200e-10 
+
+*** +CBD    =0.000e+00 CBS    =0.000e+00 IS     =0.000e+00 
+
++MJ     =5.600e-01 N      =1.000e+00 MJSW   =4.300e-01 
+
++PB     =1.020e+00 TT     =0.000e+00 
+
++PBSW   =1.020e+00 
+
+* ----------------------------------------------------------------------
+
+.SUBCKT PD A C PARAMS: AREA=1e-12 PERI=4e-6
+
+* ----------------------------------------------------------------------
+
+************************* SIMULATION PARAMETERS ************************
+
+* ----------------------------------------------------------------------
+
+* format    : PSPICE
+
+* model     : DIODE
+
+* process   : C35
+
+* revision  : 2; 
+
+* extracted : C64685 ; 2002-12; ese(487)
+
+* doc#      : ENG-182 REV_2
+
+* ----------------------------------------------------------------------
+
+*                        TYPICAL MEAN CONDITION
+
+* ----------------------------------------------------------------------
+
+* TERMINALS: A=anode=P-region C=cathode=N-region
+
+* VARIABLES: M (mulitiplier), AREA [m^2], PERI [m].
+
+* NOTE: The role of a protection DIODE is to conduct ESD current to VDD 
+
+* (or from VSS). This forward bias is NOT modelled, only leakage current 
+
+* and capacitance during normal operation. Any inductive load etc that 
+
+* will give forward bias, must be limited by other components to within 
+
+* Operating Conditions, otherwise parasitic bipolar action can occur.
+
+*
+
+D1 A C PDINSUBA {AREA}
+
+D2 A C PDINSUBS {PERI}
+
+.ENDS PD
+
+*
+
+.MODEL PDINSUBA D 
+
++IS     =9.000e-05 N      =1.000e+00 
+
++CJO    =1.360e-03 M      =5.600e-01 VJ     =1.020e+00 
+
++TT     =0.000e+00 FC     =0.500e+00 
+
++EG     =1.110e+00 XTI    =3.000e+00 
+
++AF     =1.000e+00 KF     =0.000e+00
+
+.MODEL PDINSUBS D
+
++IS     =0.000e+00 N      =1.000e+00 
+
++CJO    =3.200e-10 M      =4.300e-01 VJ     =1.020e+00 
+
++TT     =0.000e+00 FC     =0.500e+00  
+
++EG     =1.110e+00 XTI    =3.000e+00 
+
++AF     =1.000e+00 KF     =0.000e+00
+
+* ----------------------------------------------------------------------
+
+.SUBCKT MODNH D G S B PARAMS: W=1e-6 L=1e-6 AD=0 AS=0 PD=0 PS=0 NRD=0 NRS=0
+
+* VARIABLES: W,L,AD,AS,PD,PS,NRD,NRS = standard MOSFET parameters
+
+*
+
+M1 D1 G S B MODNHINSUB W={W} L={L} AD={AD} AS={AS} PD={PD} PS={PS} NRD={NRD} NRS={NRS}
+
+RD D1 D {1.328e+03*4.000e-06/(W)} TC=6.200e-03 
+
+.ENDS MODNH
+
+.MODEL MODNHINSUB NMOS LEVEL=7 
+
+* ----------------------------------------------------------------------
+
+************************* SIMULATION PARAMETERS ************************
+
+* ----------------------------------------------------------------------
+
+* format    : PSPICE
+
+* model     : MOS BSIM3v3
+
+* process   : C35
+
+* revision  : ; 
+
+* extracted : C35 B11004.L2; 2002-11; hhl(5481)
+
+* doc#      : REV_2.0
+
+* ----------------------------------------------------------------------
+
+*                        TYPICAL MEAN CONDITION
+
+* ----------------------------------------------------------------------
+
+*
+
+*        *** Flags ***
+
++MOBMOD =1.000e+00 CAPMOD =2.000e+00 
+
++NOIMOD =1.000e+00 
+
+*        *** Threshold voltage related model parameters ***
+
++K1     =6.2697e-01 
+
++K2     =-4.966e-03 K3     =-2.240e+00 K3B    =6.954e-01 
+
++NCH    =2.236e+17 VTH0   =4.460e-01 
+
++VOFF   =-5.090e-02 DVT0   =4.985e+01 DVT1   =1.296e+00 
+
++DVT2   =1.311e-02 KETA   =-4.553e-02 
+
++PSCBE1 =1.000e+10 PSCBE2 =1.024e-05 
+
++DVT0W  =0.000e+00 DVT1W  =0.000e+00 DVT2W  =0.000e+00 
+
+*        *** Mobility related model parameters ***
+
++UA     =1.000e-30 UB     =1.949e-18 UC     =1.217e-10 
+
++U0     =3.427e+02 
+
+*        *** Subthreshold related parameters ***
+
++DSUB   =5.000e-01 ETA0   =3.075e-02 ETAB   =-5.261e-02 
+
++NFACTOR=2.034e-01 
+
+*        *** Saturation related parameters ***
+
++EM     =4.100e+07 PCLM   =2.940e-01 
+
++PDIBLC1=3.090e-02 PDIBLC2=6.375e-04 DROUT  =5.000e-01 
+
++A0     =1.893e-01 A1     =0.000e+00 A2     =1.000e+00 
+
++PVAG   =0.000e+00 VSAT   =2.402e+05 AGS    =1.245e-01 
+
++B0     =6.790e-08 B1     =0.000e+00 DELTA  =1.729e-02 
+
++PDIBLCB=2.067e-01 
+
+*        *** Geometry modulation related parameters ***
+
++W0     =1.145e-07 
+
++DWB    =0.000e+00 DWG    =0.000e+00 
+
++LL     =0.000e+00 LW     =0.000e+00 LWL    =0.000e+00 
+
++LLN    =1.000e+00 LWN    =1.000e+00 WL     =0.000e+00 
+
++WW     =0.000e+00 WWL    =0.000e+00 WLN    =1.000e+00 
+
++WWN    =1.000e+00 
+
+*        *** Temperature effect parameters ***
+
++TNOM   =2.700e+01 AT     =3.300e+04 UTE    =-1.800e+00 
+
++KT1    =-3.302e-01 KT2    =2.200e-02 KT1L   =0.000e+00 
+
++UA1    =0.000e+00 UB1    =0.000e+00 UC1    =0.000e+00 
+
++PRT    =0.000e+00 
+
+*        *** Overlap capacitance related and dynamic model parameters   ***
+
++CGDO   =1.200e-10 CGSO   =1.200e-10 CGBO   =1.100e-10 
+
++CGDL   =0.000e+00 CGSL   =0.000e+00 CKAPPA =6.000e-01 
+
++CF     =0.000e+00 ELM    =5.000e+00 
+
++XPART  =1.000e+00 CLC    =1.000e-15 CLE    =6.000e-01 
+
+*        *** Parasitic resistance and capacitance related model parameters ***
+
++RDSW   =1.092e+03 
+
++CDSC   =7.944e-03 CDSCB  =0.000e+00 CDSCD  =8.448e-05 
+
++PRWB   =0.000e+00 PRWG   =0.000e+00 CIT    =1.000e-03 
+
+*        *** Process and parameters extraction related model parameters ***
+
++TOX    =7.700e-09 NGATE  =0.000e+00 
+
++NLX    =1.132e-07 
+
+*        *** Substrate current related model parameters ***
+
++ALPHA0 =0.000e+00 BETA0  =3.000e+01 
+
+*        *** Noise effect related model parameters ***
+
++AF     =1.400e+00 KF     =2.810e-27 EF     =1.000e+00 
+
++NOIA   =1.000e+20 NOIB   =5.000e+04 NOIC   =-1.400e-12 
+
+*        *** Common extrinsic model parameters ***
+
++LINT   =6.0000e-07 WINT   =2.6050e-08 XJ     =3.000e-07 
+
++RSH    =8.200e+01 JS     =6.000e-05 
+
++CJ     =8.000e-05 CJSW   =5.100e-10 
+
++CBD    =0.000e+00 CBS    =0.000e+00 IS     =0.000e+00 
+
++MJ     =3.900e-01 N      =1.000e+00 MJSW   =2.700e-01 
+
++PB     =5.300e-01 TT     =0.000e+00 
+
++PBSW   =6.900e-01 
+
+* ----------------------------------------------------------------------
+
+.SUBCKT MODNMH D G S B PARAMS: W=1e-6 L=1e-6 AD=0 AS=0 PD=0 PS=0 NRD=0 NRS=0
+
+* VARIABLES: W,L,AD,AS,PD,PS,NRD,NRS = standard MOSFET parameters
+
+*
+
+M1 D1 G S B MODNMHINSUB W={W} L={L} AD={AD} AS={AS} PD={PD} PS={PS} NRD={NRD} NRS={NRS}
+
+RD D1 D {1.547e+03*4.000e-06/(W)} TC=6.200e-03 
+
+.ENDS MODNMH
+
+.MODEL MODNMHINSUB NMOS LEVEL=7 
+
+* ----------------------------------------------------------------------
+
+************************* SIMULATION PARAMETERS ************************
+
+* ----------------------------------------------------------------------
+
+* format    : PSPICE
+
+* model     : MOS BSIM3v3
+
+* process   : C35
+
+* revision  : ; 
+
+* extracted : C35 B11004.L2; 2002-11; hhl(5481)
+
+* doc#      : REV_2.0
+
+* ----------------------------------------------------------------------
+
+*                        TYPICAL MEAN CONDITION
+
+* ----------------------------------------------------------------------
+
+*
+
+*        *** Flags ***
+
++MOBMOD =1.000e+00 CAPMOD =2.000e+00 
+
++NOIMOD =1.000e+00 
+
+*        *** Threshold voltage related model parameters ***
+
++K1     =9.5409e-01 
+
++K2     =4.9101e-02 K3     =-2.439e+00 K3B    =4.077e-01 
+
++NCH    =2.092e+17 VTH0   =6.449e-01 
+
++VOFF   =-4.948e-02 DVT0   =4.985e+01 DVT1   =1.683e+00 
+
++DVT2   =4.126e-02 KETA   =-7.397e-02 
+
++PSCBE1 =4.000e+10 PSCBE2 =1.000e-10 
+
++DVT0W  =0.000e+00 DVT1W  =0.000e+00 DVT2W  =0.000e+00 
+
+*        *** Mobility related model parameters ***
+
++UA     =1.000e-12 UB     =3.768e-19 UC     =6.391e-12 
+
++U0     =4.394e+02 
+
+*        *** Subthreshold related parameters ***
+
++DSUB   =5.000e-01 ETA0   =1.616e-03 ETAB   =-1.373e-02 
+
++NFACTOR=3.455e-01 
+
+*        *** Saturation related parameters ***
+
++EM     =4.100e+07 PCLM   =1.055e-01 
+
++PDIBLC1=1.000e-10 PDIBLC2=1.000e-10 DROUT  =5.000e-01 
+
++A0     =2.190e-01 A1     =0.000e+00 A2     =1.000e+00 
+
++PVAG   =0.000e+00 VSAT   =5.129e+04 AGS    =9.448e-02 
+
++B0     =-3.629e-08 B1     =0.000e+00 DELTA  =3.370e-03 
+
++PDIBLCB=3.872e-01 
+
+*        *** Geometry modulation related parameters ***
+
++W0     =6.289e-08 
+
++DWB    =0.000e+00 DWG    =0.000e+00 
+
++LL     =0.000e+00 LW     =0.000e+00 LWL    =0.000e+00 
+
++LLN    =1.000e+00 LWN    =1.000e+00 WL     =0.000e+00 
+
++WW     =0.000e+00 WWL    =0.000e+00 WLN    =1.000e+00 
+
++WWN    =1.000e+00 
+
+*        *** Temperature effect parameters ***
+
++TNOM   =2.700e+01 AT     =3.300e+04 UTE    =-1.760e+00 
+
++KT1    =-4.502e-01 KT2    =2.200e-02 KT1L   =0.000e+00 
+
++UA1    =0.000e+00 UB1    =0.000e+00 UC1    =0.000e+00 
+
++PRT    =0.000e+00 
+
+*        *** Overlap capacitance related and dynamic model parameters   ***
+
++CGDO   =1.080e-10 CGSO   =1.080e-10 CGBO   =1.100e-10 
+
++CGDL   =0.000e+00 CGSL   =0.000e+00 CKAPPA =6.000e-01 
+
++CF     =0.000e+00 ELM    =5.000e+00 
+
++XPART  =1.000e+00 CLC    =1.000e-15 CLE    =6.000e-01 
+
+*        *** Parasitic resistance and capacitance related model parameters ***
+
++RDSW   =5.304e+02 
+
++CDSC   =1.000e-02 CDSCB  =0.000e+00 CDSCD  =8.448e-05 
+
++PRWB   =0.000e+00 PRWG   =0.000e+00 CIT    =8.122e-04 
+
+*        *** Process and parameters extraction related model parameters ***
+
++TOX    =1.514e-08 NGATE  =0.000e+00 
+
++NLX    =1.593e-07 
+
+*        *** Substrate current related model parameters ***
+
++ALPHA0 =0.000e+00 BETA0  =3.000e+01 
+
+*        *** Noise effect related model parameters ***
+
++AF     =1.400e+00 KF     =2.810e-27 EF     =1.000e+00 
+
++NOIA   =1.000e+20 NOIB   =5.000e+04 NOIC   =-1.400e-12 
+
+*        *** Common extrinsic model parameters ***
+
++LINT   =6.1417e-07 WINT   =4.9380e-08 XJ     =3.000e-07 
+
++RSH    =7.946e+01 JS     =6.000e-05 
+
++CJ     =8.000e-05 CJSW   =5.100e-10 
+
++CBD    =0.000e+00 CBS    =0.000e+00 IS     =0.000e+00 
+
++MJ     =3.900e-01 N      =1.000e+00 MJSW   =2.700e-01 
+
++PB     =5.300e-01 TT     =0.000e+00 
+
++PBSW   =6.900e-01 
+
+* ----------------------------------------------------------------------
+
+* Owner: austriamicrosystems
+
+* HIT-Kit: Digital
+
+
